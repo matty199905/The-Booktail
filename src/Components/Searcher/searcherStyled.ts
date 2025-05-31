@@ -13,6 +13,10 @@ form{
     padding: 10px 15px;
     border-radius:15px;
     border: none;
+    &:focus{
+         outline: none;
+    border: none;
+    }
    }
    button {
       background-color: rgba(0, 4, 255, 0.8)

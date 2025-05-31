@@ -1,5 +1,5 @@
-import React from 'react'
-import { Btn, BtnContainer, CocktailsRenderContainer, CocktailsWrapper, DropDownContainer, DropDownMenuContainer, IconContainer } from './cocktailsContainerStyled'
+import React, { useState } from 'react'
+import { DropDownBtnContainer, CocktailsRenderContainer, CocktailsWrapper, DeleteFilter, DropDownContainer, DropDownMenuContainer, IconContainer, BtnsContainer, ToggleBtn } from './cocktailsContainerStyled'
 import { IoIosArrowDown } from "react-icons/io";
 import { useSelectorTS } from '../../../Redux/store';
 import CocktailCard from '../CocktailCard/CocktailCard';
@@ -14,24 +14,78 @@ type CocktailsContainerData = {
 
 const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
 
-    const { Cocktails } = useSelectorTS(state => state.Cocktails)
+    const { Cocktails } = useSelectorTS(state => state.Cocktails);
     const { searchValue } = useSelectorTS(state => state.Searcher);
+    const [dropDown, setDropDown] = useState(false);
+    const [activeFilter, setActiveFilter] = useState('')
+    const letter = useSelectorTS(state => state.Searcher.searchByLetter);
     const location = useLocation()
 
+
+    const renderAll =
+        Cocktails
+            .slice()
+            .sort((a, b) => {
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
+            })
+            .map((item) => <CocktailCard {...item} key={item.id} />)
+
+
+    const renderSearched =
+        Cocktails
+            .filter(item =>
+                item.name.toLowerCase().trim().includes(searchValue.toLowerCase().trim())
+            )
+            .map(item => <CocktailCard {...item} key={item.id} />)
+
+
+    const renderByLetter =
+        Cocktails
+            .filter(item => item.name.charAt(0).toUpperCase() === letter.toUpperCase())
+            .map(item => <CocktailCard {...item} key={item.id} />);
+
+
+
+    const renderByFlavors =
+        Cocktails
+            .filter((items) => { if (items.flavor.some((flavor) => flavor === activeFilter)) { return items } })
+            .map(items => <CocktailCard {...items} key={items.id} />);
 
     return (
         <CocktailsWrapper>
             <h1>{title}</h1>
 
-            <DropDownContainer>
-                <BtnContainer>
-                    <Btn>¿No sabes que tomar?</Btn>
-                    <IconContainer>
-                        <IoIosArrowDown />
-                    </IconContainer>
-                </BtnContainer>
 
-                <DropDownMenuContainer>
+
+            <DropDownContainer>
+
+
+                <BtnsContainer>
+
+                    <DropDownBtnContainer onClick={() => setDropDown(!dropDown)}>
+
+                        <ToggleBtn>
+                            {!activeFilter ? '¿No sabes que tomar?' : activeFilter}
+                        </ToggleBtn>
+                        <IconContainer
+                            dropDown={dropDown}>
+                            <IoIosArrowDown />
+                        </IconContainer>
+
+                    </DropDownBtnContainer>
+                    {
+
+                        activeFilter && <DeleteFilter onClick={() => setActiveFilter('')}>Borrar Filtro</DeleteFilter>
+                    }
+
+                </BtnsContainer>
+
+
+
+                <DropDownMenuContainer
+                    dropDown={dropDown}>
                     <ul>
                         {[
                             'Aperitivo',
@@ -49,35 +103,35 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                             'Salado',
                             'Cítrico',
                         ].map((item, index) => (
-                            <li key={index}>{item}</li>
+                            <li
+                                onClick={() => { setActiveFilter(item); setDropDown(false) }}
+                                key={index}
+                                className={(activeFilter === item) ? 'active' : ''}>{item}</li>
                         ))}
                     </ul>
                 </DropDownMenuContainer>
+
+
             </DropDownContainer>
+
+
+
+
 
             <CocktailsRenderContainer>
 
-                {
-
-                    location.pathname === '/cocktails' &&
-                    Cocktails.slice().sort((a, b) => {
-                        if (a.name < b.name) return -1;
-                        if (a.name > b.name) return 1;
-                        return 0;
-                    }).map((item) => <CocktailCard {...item} key={item.id} />)
-
-                }
-                {
-                    location.pathname === '/bySearch' &&
-                    Cocktails
-                        .filter(item =>
-                            item.name.toLowerCase().trim().includes(searchValue.toLowerCase().trim())
-                        )
-                        .map(item => <CocktailCard {...item} key={item.id} />)
-                }
+                {location.pathname === '/cocktails' && (
+                    activeFilter !== ''
+                        ? renderByFlavors
+                        : (letter !== ''
+                            ? renderByLetter
+                            : renderAll)
+                )}
+                
+                {location.pathname === '/bySearch' && renderSearched}
 
             </CocktailsRenderContainer>
- 
+
 
         </CocktailsWrapper>
     )

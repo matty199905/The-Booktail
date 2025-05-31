@@ -23,30 +23,48 @@ justify-content: center;
 align-items: center;
 
 `
-
-export const BtnContainer = styled.div`
+export const BtnsContainer = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 10px;
 `
 
-export const Btn = styled.button`
+export const DropDownBtnContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+`
+
+export const ToggleBtn = styled.button`
 font-size: 18px;
 `
 
-export const IconContainer = styled.div`
+type Icon_DropDownProps = {
+    dropDown: boolean,
+   
+}
+export const IconContainer = styled.div<Icon_DropDownProps>`
 font-size: 20px;
+transform: ${(props) => (props.dropDown === true ? 'rotate(180deg)' : 'none')};
+color: ${(props) => (props.dropDown === true ? 'orange' : 'white')};
+font-size: ${(props) => (props.dropDown === true ? '25px' : 'none')};
+transition: all 0.3s ease;
 &:hover {
     cursor: pointer;
 }
 `
 
-export const DropDownMenuContainer = styled.div`
-display: none;
-width: 100%;
-height: 200px;
+export const DropDownMenuContainer = styled.div<Icon_DropDownProps>`
+width: ${(props) => (props.dropDown === true ? '100%' : '0')};
+height: ${(props) => (props.dropDown === true ? '200px' : '0')};;
+margin:20px 0 -30px 0;
+background-color: rgb(38, 38, 38);
+border-radius: 15px;
+box-shadow: 0 0 10px black;
 overflow-y : scroll;
+transition: all 0.3s ease;
 &::-webkit-scrollbar{background-color: transparent}
 ul{ 
     display: flex;
@@ -59,10 +77,21 @@ ul{
     width: 100%;
       padding: 15px 0;
       border-bottom: 1px solid #ccc;
+      cursor: pointer;
+    }
+     .active {
+        color: orange
+      
    }
 }
 `
-
+export const DeleteFilter = styled.button`
+width: 120px;
+height: 30px;
+background-color: rgb(65, 41, 245);
+border-radius: 15px;
+letter-spacing: 1px;
+`
 
 export const CocktailsRenderContainer = styled.div`
 display: flex;
