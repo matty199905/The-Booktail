@@ -11,9 +11,12 @@ const Searcher: React.FC = () => {
   const location = useLocation()
   const navigate = useNavigate()
   const dispatch = useDispatch<AppDispatch>()
-  console.log(searchValue);
+  
 
-
+const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  dispatch(setSearchValue(e.target.value)); 
+  if(location.pathname !== '/') navigate('/bySearch')
+}
 
 
   return (
@@ -23,7 +26,7 @@ const Searcher: React.FC = () => {
         <input
           type="search"
           placeholder='Ingrese su cocktail aqui...'
-          onChange={(e) => {dispatch(setSearchValue(e.target.value)); navigate('/bySearch')}}
+          onChange={(e) => handleOnChange(e)}
           value={searchValue}
         />
         {
