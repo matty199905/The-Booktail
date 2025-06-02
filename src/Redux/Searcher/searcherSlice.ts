@@ -13,20 +13,26 @@ const searcherSlice = createSlice({
         setSearchValue: (state, action) => {
             return {
                 ...state,
-                searchValue: action.payload 
+                searchValue: action.payload,
+                searchByLetter: '',
+                searchByLiquor: ''
 
             }
         },
         setLetter: (state, action) => {
             return {
                 ...state,
-                searchByLetter: state.searchByLetter === action.payload ? '' : action.payload
+                searchByLetter: state.searchByLetter === action.payload ? '' : action.payload,
+                searchValue: '',
+                searchByLiquor: ''
             }
         },
-                setLiquor: (state, action) => {
+        setLiquor: (state, action) => {
             return {
                 ...state,
-                searchByLiquor: action.payload 
+                searchByLiquor: action.payload,
+                searchValue: '',
+                searchByLetter: '',
 
             }
         },
