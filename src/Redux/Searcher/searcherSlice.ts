@@ -36,8 +36,17 @@ const searcherSlice = createSlice({
 
             }
         },
+        resetValues: (state) => {
+            return {
+                ...state,
+                searchByLiquor: '',
+                searchValue: '',
+                searchByLetter: '',
+
+            }
+        },
     }
 }
 );
-export const { setSearchValue, setLetter, setLiquor } = searcherSlice.actions;
+export const { setSearchValue, setLetter, setLiquor, resetValues } = searcherSlice.actions;
 export default searcherSlice.reducer

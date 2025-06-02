@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { DropDownBtnContainer, CocktailsRenderContainer, CocktailsWrapper, DeleteFilter, DropDownContainer, DropDownMenuContainer, IconContainer, BtnsContainer, ToggleBtn } from './cocktailsContainerStyled'
 import { IoIosArrowDown } from "react-icons/io";
-import { useSelectorTS } from '../../../Redux/store';
+import { useSelectorTS, type AppDispatch } from '../../../Redux/store';
 import CocktailCard from '../CocktailCard/CocktailCard';
 import { useLocation } from 'react-router-dom';
+import { resetValues } from '../../../Redux/Searcher/searcherSlice';
+import { useDispatch } from 'react-redux';
 
 
 
@@ -16,11 +18,13 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
 
     const { Cocktails } = useSelectorTS(state => state.Cocktails);
     const { searchValue } = useSelectorTS(state => state.Searcher);
-    const { searchByLiquor } = useSelectorTS(state => state.Searcher)
+    const { searchByLiquor } = useSelectorTS(state => state.Searcher);
+    const { searchByLetter } = useSelectorTS(state => state.Searcher);
     const [dropDown, setDropDown] = useState(false);
     const [activeFilter, setActiveFilter] = useState('')
     const letter = useSelectorTS(state => state.Searcher.searchByLetter);
     const location = useLocation()
+    const dispatch = useDispatch<AppDispatch>()
 
 
     const renderAll =
@@ -86,7 +90,7 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                     </DropDownBtnContainer>
                     {
 
-                        activeFilter && <DeleteFilter onClick={() => setActiveFilter('')}>Borrar Filtro</DeleteFilter>
+                        (activeFilter || searchByLiquor || searchByLetter) && <DeleteFilter onClick={() => {setActiveFilter(''); dispatch(resetValues())}}>Borrar Filtro</DeleteFilter>
                     }
 
                 </BtnsContainer>

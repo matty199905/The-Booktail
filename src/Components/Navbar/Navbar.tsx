@@ -4,6 +4,9 @@ import Logo from '../../Imgs/Logo/Logo.png'
 import Searcher from '../Searcher/Searcher'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { resetValues } from '../../Redux/Searcher/searcherSlice'
+import type { AppDispatch } from '../../Redux/store'
+import { useDispatch } from 'react-redux'
 
 
 
@@ -11,6 +14,7 @@ const Navbar: React.FC = () => {
 
   const navigate = useNavigate()
   const location = useLocation()
+  const dispatch = useDispatch<AppDispatch>()
 
 
 
@@ -35,16 +39,16 @@ const Navbar: React.FC = () => {
 
       <LinksContainer>
         <ul>
-          <li><NavbarLink to='/'>Home</NavbarLink></li>
+          <li><NavbarLink to='/' onClick={()=> dispatch(resetValues())}>Home</NavbarLink></li>
           {
             location.pathname !== '/licores' &&
 
-            <li><NavbarLink to='/licores'>Licores</NavbarLink></li>
+            <li><NavbarLink to='/licores' onClick={()=> dispatch(resetValues())}>Licores</NavbarLink></li>
           }
           {
             location.pathname !== '/cocktails' &&
 
-            <li><NavbarLink to='/cocktails'>Cocktails</NavbarLink></li>
+            <li><NavbarLink to='/cocktails' onClick={()=> dispatch(resetValues())}>Cocktails</NavbarLink></li>
           }
           
 

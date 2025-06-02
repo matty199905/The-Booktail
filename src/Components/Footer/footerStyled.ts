@@ -13,7 +13,7 @@ gap: 10px;
 span {
     padding: 10px 20px;
     border-radius: 15px;
-    background-color:  rgb(22, 24, 54);
+    background-color:  rgb(110, 46, 46);
     color: rgb(255, 255, 255);
     box-shadow: 0 0 5px black;
     letter-spacing: 1px;
@@ -32,13 +32,13 @@ ul {
         transition: all 0.2s ease;
         &:hover{
             transform: scale(1.4);
-            color: orange;
+            color: rgb(248, 166, 166);
             transition: all 0.2s ease;
         }
     }
    .active {
     transform: scale(1.4);
-    color: orange;
+    color: rgb(248, 166, 166);
      transition: all 0.2s ease;
    }
 }

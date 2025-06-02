@@ -48,7 +48,7 @@ type Icon_DropDownProps = {
 export const IconContainer = styled.div<Icon_DropDownProps>`
 font-size: 20px;
 transform: ${(props) => (props.dropDown === true ? 'rotate(180deg)' : 'none')};
-color: ${(props) => (props.dropDown === true ? 'orange' : 'white')};
+color: ${(props) => (props.dropDown === true ? 'rgb(248, 166, 166)' : 'white')};
 font-size: ${(props) => (props.dropDown === true ? '25px' : 'none')};
 transition: all 0.3s ease;
 &:hover {
@@ -80,7 +80,7 @@ ul{
       cursor: pointer;
     }
      .active {
-        color: orange
+        color:rgb(248, 166, 166)
       
    }
 }

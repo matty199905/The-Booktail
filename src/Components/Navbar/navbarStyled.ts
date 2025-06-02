@@ -18,6 +18,7 @@ border-bottom-left-radius: 15px;
 border-bottom-right-radius: 15px;
 border-bottom: 1px solid rgba(255, 255, 255, 0.52);
 box-shadow: 0 0 10px black;
+background: linear-gradient(to bottom, rgb(52, 55, 98),rgb(86, 84, 191),rgb(86, 84, 191));
 `
 
 export const LogoContainer = styled.div`
@@ -34,11 +35,7 @@ span{
     font-size: 20px;
     font-weight: 600;
          transition: all 0.8s ease;
-    &:hover{
-        cursor: pointer;
-          color: orange;
-               transition: all 0.8s ease;
-      }
+cursor: pointer;
 }
 `
 
@@ -54,12 +51,8 @@ align-items: center;
 gap: 25px;
 margin: 30px 30px 0 0;
 li{
-      
-        &:hover{
+
             cursor: pointer;
-            
-            
-        }
     }
 }
 `
@@ -67,8 +60,4 @@ li{
 export const NavbarLink = styled(NavLink)`
 font-size: 17px;
 transition: all 0.6s ease;
-&:hover{
-          color: orange;
-          transition: all 0.6s ease;
-      }
 `
