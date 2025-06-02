@@ -88,7 +88,7 @@ ul{
 export const DeleteFilter = styled.button`
 width: 120px;
 height: 30px;
-background-color: rgb(65, 41, 245);
+background-color: rgb(144, 60, 60);
 border-radius: 15px;
 letter-spacing: 1px;
 `

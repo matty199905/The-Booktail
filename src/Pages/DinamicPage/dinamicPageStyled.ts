@@ -3,21 +3,6 @@ import styled from "styled-components";
 
 
 
-
-
-export const DinamicPageContainer = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap:20px;
-width: 70vw;
-height: 90vh;
-padding: 20px;
-background: linear-gradient(to bottom,  transparent, transparent, rgba(0, 0, 0, 0.28) );
-border-radius: 15px;
-box-shadow: 0 0 20px black;
-`
-
 export const IconContainer = styled.div`
 position: absolute;
 top: 40px;
@@ -33,9 +18,20 @@ cursor: pointer;
 }
 `
 
-type ImgContainerProps = {
-    img:string
-}
+
+export const DinamicPageContainer = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap:20px;
+width: 70vw;
+height: 90vh;
+padding: 20px;
+background: linear-gradient(to bottom,  transparent, transparent,transparent, rgba(0, 0, 0, 0.28) );
+border-radius: 15px;
+box-shadow: 0 0 20px black;
+background-color: rgb(91, 41, 41)
+`
 
 export const Divider = styled.div`
 height: 106.5%;
@@ -44,6 +40,11 @@ background-color: rgba(0, 0, 0, 0.59);
 box-shadow: 0 0 8px black;
 `
 
+
+
+type ImgContainerProps = {
+    img:string
+}
 export const ImgContainer = styled.div<ImgContainerProps>`
 width: 45%;
 height: 100%;
@@ -52,6 +53,7 @@ background-position: center;
 background-size: cover;
 border-radius: 15px;
 box-shadow: 0 0 5px black;
+
 `
 
 export const DetailsContainer = styled.div`
@@ -64,6 +66,7 @@ padding: 30px 30px 30px 15px;
 width: 60%;
 height: 100%;
 overflow-y: scroll;
+
 `
 
 export const FlavorsData = styled.div`
@@ -73,6 +76,7 @@ align-items: center;
 gap: 30px;
 width: 100%;
 padding: 20px 30px;
+background-color: rgb(52, 55, 98);
 border: 2px solid rgba(0, 0, 0, 0.54);
 border-radius: 15px;
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.53);

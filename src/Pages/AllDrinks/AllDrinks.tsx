@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { AllDrinksWrapper } from './allDrinksStyled'
 import CocktailsContainer from '../../Components/Cocktails/CocktailsContainer/CocktailsContainer'
 import { useSelectorTS } from '../../Redux/store'
 
@@ -20,12 +19,10 @@ const AllDrinks: React.FC = () => {
   },[letter])
 
   return (
-<AllDrinksWrapper>
+
 
   <CocktailsContainer title={'Todos los Cocktails'}/>
 
-  
-</AllDrinksWrapper>
   )
 }
 

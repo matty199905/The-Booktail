@@ -16,6 +16,7 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
 
     const { Cocktails } = useSelectorTS(state => state.Cocktails);
     const { searchValue } = useSelectorTS(state => state.Searcher);
+    const { searchByLiquor } = useSelectorTS(state => state.Searcher)
     const [dropDown, setDropDown] = useState(false);
     const [activeFilter, setActiveFilter] = useState('')
     const letter = useSelectorTS(state => state.Searcher.searchByLetter);
@@ -50,8 +51,16 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
 
     const renderByFlavors =
         Cocktails
-            .filter((items) => { if (items.flavor.some((flavor) => flavor === activeFilter)) { return items } })
+            .filter((items) => { if (items.flavor?.some((flavor) => flavor === activeFilter)) { return items } })
             .map(items => <CocktailCard {...items} key={items.id} />);
+
+
+    const renderByLiquors =
+        Cocktails
+            .filter((item) => { if (item.liquor.find((item)=> item === searchByLiquor) ) { return item } })
+            .map((item) => { return <CocktailCard {...item} key={item.id} /> })
+
+
 
     return (
         <CocktailsWrapper>
@@ -124,10 +133,10 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                     activeFilter !== ''
                         ? renderByFlavors
                         : (letter !== ''
-                            ? renderByLetter
+                            ? renderByLetter : searchByLiquor !== '' ? renderByLiquors
                             : renderAll)
                 )}
-                
+
                 {location.pathname === '/bySearch' && renderSearched}
 
             </CocktailsRenderContainer>

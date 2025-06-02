@@ -13,7 +13,7 @@ gap: 10px;
 span {
     padding: 10px 20px;
     border-radius: 15px;
-    background-color: rgb(65, 41, 245);
+    background-color:  rgb(22, 24, 54);
     color: rgb(255, 255, 255);
     box-shadow: 0 0 5px black;
     letter-spacing: 1px;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 
 export const CardContainer = styled.div`
@@ -7,13 +7,13 @@ flex-direction: column;
 justify-content: flex-start;
 align-items: center;
 gap: 17px;
-width: 230px;
-height: 330px;
-padding: 8px;
-background-color:   rgb(52, 55, 98);
+width: 150px;
+height: 200px;
+padding: 10px;
 border-radius: 15px;
 box-shadow: 0 0 20px black;
 transition: all 0.2s ease;
+background-color: rgb(52, 55, 98);
 &:hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -22,6 +22,7 @@ transition: all 0.2s ease;
 }
 h3 {
 text-align: center;
+font-size: 16px;
 }
 
 `
@@ -31,11 +32,11 @@ type imgContainerProps = {
 }
 export const ImgContainer = styled.div<imgContainerProps>` 
 width: 100%;
-height: 85%;
+height: 75%;
 border-radius: 15px;
 background-image: ${(props) => (props.img ? `url(${props.img})` : 'none'
     )};
 background-size: cover;
-background-position: bottom;
+background-position: center;
 
 `

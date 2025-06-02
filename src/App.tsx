@@ -19,12 +19,14 @@ console.log(location);
     <Layout>
       <RoutesApp />
       {
-        (location.pathname !== '/' && location.state?.page !== 'dinamicPage') && (
-          <>
+        location.pathname === '/licores' ? (
           <Navbar/>
-          <Footer/>
+        ) : (location.pathname !== '/' && location.state?.page !== 'dinamicPage') ? (
+          <>
+            <Navbar/>
+            <Footer/>
           </>
-        )
+        ) : null
       }
     </Layout>
 

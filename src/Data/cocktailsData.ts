@@ -71,6 +71,9 @@ import sweetMartini from '../../src/Imgs/Cocktails/sweetMartini.jpeg'
 import hotelNacional from '../../src/Imgs/Cocktails/hotelnacional.jpg'
 import gibson from '../../src/Imgs/Cocktails/gibson.webp'
 import clarito from '../../src/Imgs/Cocktails/clarito.jpg'
+import fernetCola from '../../src/Imgs/Cocktails/fernet-con-coca.webp'
+import destornillador from '../../src/Imgs/Cocktails/destornillador.jpg'
+import gintonic from '../../src/Imgs/Cocktails/gintonic.avif'
 
 type FlavorsData = 'Aperitivo' | 'Dulce' | 'Fresco' | 'Tropical' | 'Frutal' | 'Floral' | 'Especiado' | 'Herbal / Botánico' | 'Cremoso' | 'Sparkling' | 'Seco' | 'Picante' | 'Salado' |'Cítrico'
 
@@ -93,12 +96,12 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Aperitivo"],
     ingredients: [
       "30 ml Campari",
-      "30 ml vermut rosso",
+      "30 ml Vermouth Rosso",
       "Soda"
     ],
-    liquor: ["Campari", "vermut rosso"],
+    liquor: ["Campari", "Vermouth Rosso"],
     description: [
-      "Servir Campari y vermut en vaso old fashioned con hielo.",
+      "Servir Campari y Vermouth en vaso old fashioned con hielo.",
       "Completar con soda.",
       "Decorar con rodaja de naranja."
     ]
@@ -113,7 +116,7 @@ export const cocktailsData: CocktailData[] = [
       "60 ml Aperol",
       "30 ml Agua con gas"
     ],
-    liquor: ["Prosecco", "Aperol"],
+    liquor: ["Champagne", "Aperol"],
     description: [
       "Servir Aperol y prosecco en vaso con hielo.",
       "Agregar agua con gas.",
@@ -131,7 +134,7 @@ export const cocktailsData: CocktailData[] = [
       "15 ml Jugo de limón fresco",
       "1 dash Crema de violeta (opcional)"
     ],
-    liquor: ["Gin", "Licor de marrasquino"],
+    liquor: ["Gin", "Licor de Maraschino"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa fría.",
@@ -145,10 +148,10 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Aperitivo", "Seco"],
     ingredients: [
       "50 ml rye whiskey (o bourbon)",
-      "20 ml vermut rosso",
+      "20 ml Vermouth Rosso",
       "1 dash de angostura bitters"
     ],
-    liquor: ["Whiskey", "Vermut rosso"],
+    liquor: ["Whisky", "Vermouth Rosso"],
     description: [
       "Verter todos los ingredientes en un vaso mezclador con hielo.",
       "Remover bien hasta enfriar.",
@@ -188,7 +191,7 @@ export const cocktailsData: CocktailData[] = [
       "15 ml Jugo de lima fresco",
       "15 ml de Almibar"
     ],
-    liquor: ["Ron dorado", "Prosecco"],
+    liquor: ["Ron", "Champagne"],
     description: [
       "Batir ron, jugo de piña, lima y jarabe con hielo.",
       "Colar en copa flauta.",
@@ -221,7 +224,7 @@ export const cocktailsData: CocktailData[] = [
       "50 ml puré de durazno blanco",
       "100 ml Prosecco"
     ],
-    liquor: ["Prosecco"],
+    liquor: ["Champagne"],
     description: [
       "Verter el puré de durazno en una copa flauta.",
       "Agregar lentamente el Prosecco frío.",
@@ -236,11 +239,11 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Aperitivo", "Herbal / Botánico"],
     ingredients: [
       "30 ml Gin",
-      "30 ml vermut rosso",
+      "30 ml Vermouth Rosso",
       "30 ml Chartreuse verde",
       "1 dash Angostura bitters"
     ],
-    liquor: ["Gin", "vermut rosso", "Chartreuse verde"],
+    liquor: ["Gin", "Vermouth Rosso", "Chartreuse"],
     description: [
       "Remover todos los ingredientes con hielo.",
       "Colar en copa fría.",
@@ -254,9 +257,9 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Seco", 'Dulce', 'Herbal / Botánico' ],
     ingredients: [
       "50 ml Vodka",
-      "20 ml Licor de café"
+      "20 ml Licor de Café"
     ],
-    liquor: ["Vodka", "Licor de café"],
+    liquor: ["Vodka", "Licor de Café"],
     description: [
       "Servir ingredientes en vaso old fashioned con hielo.",
       "Remover suavemente."
@@ -292,7 +295,7 @@ export const cocktailsData: CocktailData[] = [
       "15 ml Curaçao azul",
       "30 ml Limonada"
     ],
-    liquor: ["Vodka", "Curaçao azul"],
+    liquor: ["Vodka", "Blue Curaçao"],
     description: [
       "Servir todos los ingredientes en vaso alto con hielo.",
       "Remover suavemente.",
@@ -361,12 +364,12 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Fresco", "Dulce", 'Frutal'],
     ingredients: [
       "45 ml gin",
-      "15 ml vermut seco",
+      "15 ml Vermouth Dry",
       "15 ml jugo de limón",
       "15 ml jarabe de frambuesa",
       "1 clara de huevo (opcional)"
     ],
-    liquor: ["Gin", "Vermut seco"],
+    liquor: ["Gin", "Vermouth Dry"],
     description: [
       "Agregar todos los ingredientes en una coctelera sin hielo y agitar en seco para emulsionar la clara.",
       "Agregar hielo y agitar nuevamente hasta enfriar bien.",
@@ -385,7 +388,7 @@ export const cocktailsData: CocktailData[] = [
       "15 ml Jugo de lima fresco",
       "30 ml Jugo de arándanos"
     ],
-    liquor: ["Vodka citron", "Cointreau"],
+    liquor: ["Vodka", "Cointreau"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa de cóctel fría.",
@@ -402,7 +405,7 @@ export const cocktailsData: CocktailData[] = [
       "120 ml Coca-Cola",
       "10 ml jugo de lima"
     ],
-    liquor: ["Ron blanco"],
+    liquor: ["Ron"],
     description: [
       "Llenar un vaso highball con hielo.",
       "Agregar el ron y el jugo de lima.",
@@ -421,7 +424,7 @@ export const cocktailsData: CocktailData[] = [
       "25 ml Jugo de lima fresco",
       "15 ml de Almibar"
     ],
-    liquor: ["Ron blanco"],
+    liquor: ["Ron"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa fría.",
@@ -435,11 +438,11 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Seco"],
     ingredients: [
       "60 ml gin",
-      "10 ml vermut seco"
+      "10 ml Vermouth Dry"
     ],
-    liquor: ["Gin", "Vermut seco"],
+    liquor: ["Gin", "Vermouth Dry"],
     description: [
-      "Verter el gin y el vermut seco en un vaso mezclador con hielo.",
+      "Verter el gin y el Vermouth Dry en un vaso mezclador con hielo.",
       "Revolver bien hasta enfriar.",
       "Colar en una copa cóctel fría.",
       "Decorar con una aceituna verde o un twist de limón, según preferencia."
@@ -455,10 +458,10 @@ export const cocktailsData: CocktailData[] = [
     ingredients: [
       "40 ml Vodka",
       "30 ml Café espresso frío",
-      "20 ml Licor de café",
+      "20 ml Licor de Café",
       "10 ml de Almibar"
     ],
-    liquor: ["Vodka", "Licor de café"],
+    liquor: ["Vodka", "Licor de Café"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa de cóctel fría.",
@@ -562,7 +565,7 @@ export const cocktailsData: CocktailData[] = [
       "35 ml Scotch whisky",
       "35 ml Amaretto"
     ],
-    liquor: ["Scotch whisky", "Amaretto"],
+    liquor: ["Whisky", "Amaretto"],
     description: [
       "Servir ingredientes en vaso old fashioned con hielo.",
       "Remover suavemente."
@@ -589,11 +592,11 @@ export const cocktailsData: CocktailData[] = [
     img: alexander,
     flavor: ["Dulce", "Cremoso"],
     ingredients: [
-      "30 ml coñac",
+      "30 ml Cognac",
       "30 ml crema de cacao (oscura)",
       "30 ml crema de leche"
     ],
-    liquor: ["Coñac", "Crema de cacao"],
+    liquor: ["Cognac", "Crema de cacao"],
     description: [
       "Agregar todos los ingredientes en una coctelera con hielo.",
       "Agitar enérgicamente hasta enfriar.",
@@ -612,7 +615,7 @@ export const cocktailsData: CocktailData[] = [
       "30 ml crema de coco",
       "90 ml jugo de piña"
     ],
-    liquor: ["Ron blanco"],
+    liquor: ["Ron"],
     description: [
       "Colocar todos los ingredientes en una licuadora con hielo.",
       "Licuar hasta obtener una textura suave.",
@@ -631,7 +634,7 @@ export const cocktailsData: CocktailData[] = [
       "30 ml Licor de cacao blanco",
       "30 ml Crema"
     ],
-    liquor: ["Licor de menta verde", "Licor de cacao blanco"],
+    liquor: ["Licor de Menta", "Licor de Cacao"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa fría."
@@ -645,12 +648,12 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Aperitivo", 'Seco', 'Herbal / Botánico'],
     ingredients: [
       "45 ml gin",
-      "45 ml vermut rojo (rosso)",
+      "45 ml Vermouth Rosso (rosso)",
       "1 dash de Fernet Branca"
     ],
-    liquor: ["Gin", "Vermut rojo", "Fernet Branca"],
+    liquor: ["Gin", "Vermouth Rosso", "Fernet"],
     description: [
-      "Verter el gin y el vermut rojo en un vaso mezclador con hielo.",
+      "Verter el gin y el Vermouth Rosso en un vaso mezclador con hielo.",
       "Agregar un dash de Fernet Branca.",
       "Revolver bien hasta enfriar.",
       "Colar en una copa cóctel fría.",
@@ -671,7 +674,7 @@ export const cocktailsData: CocktailData[] = [
       "15 ml de Almibar",
       "7.5 ml Jarabe de granadina"
     ],
-    liquor: ["Ron blanco", "Ron oscuro"],
+    liquor: ["Ron"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en vaso hurricane con hielo.",
@@ -689,7 +692,7 @@ export const cocktailsData: CocktailData[] = [
       "30 ml Crema batida",
       "1 cucharadita de azúcar"
     ],
-    liquor: ["Whiskey irlandés"],
+    liquor: ["Whisky"],
     description: [
       "Mezclar el whiskey y el café caliente.",
       "Agregar azúcar y revolver.",
@@ -707,7 +710,7 @@ export const cocktailsData: CocktailData[] = [
       "15 ml jarabe simple",
       "Soda"
     ],
-    liquor: ["Bourbon"],
+    liquor: ["Whisky"],
     description: [
       "Llenar un vaso highball con hielo.",
       "Agregar gin, jugo de limón y jarabe simple.",
@@ -741,7 +744,7 @@ export const cocktailsData: CocktailData[] = [
       "90 ml Vino blanco seco",
       "10 ml Licor de cassis"
     ],
-    liquor: ["Vino blanco seco", "Licor de cassis"],
+    liquor: ["Vino", "Licor de Cassis"],
     description: [
       "Servir licor de cassis en copa flauta.",
       "Completar con vino blanco seco.",
@@ -757,7 +760,7 @@ export const cocktailsData: CocktailData[] = [
       "90 ml Champagne",
       "10 ml Licor de cassis"
     ],
-    liquor: ["Champagne", "Licor de cassis"],
+    liquor: ["Champagne", "Licor de Cassis"],
     description: [
       "Servir licor de cassis en copa flauta.",
       "Completar con champagne."
@@ -774,7 +777,7 @@ export const cocktailsData: CocktailData[] = [
       "22.5 ml Licor de marrasquino",
       "22.5 ml Jugo de lima fresco"
     ],
-    liquor: ["Gin", "Chartreuse verde", "Licor de marrasquino"],
+    liquor: ["Gin", "Chartreuse", "Licor Maraschino"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa fría."
@@ -793,7 +796,7 @@ export const cocktailsData: CocktailData[] = [
       "15 ml Jarabe de almendra",
       "7.5 ml de Almibar"
     ],
-    liquor: ["Ron blanco", "Ron oscuro", "Triple sec"],
+    liquor: ["Ron","Triple sec"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en vaso old fashioned con hielo.",
@@ -826,11 +829,11 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Dulce", "Aperitivo", 'Herbal / Botánico'],
     ingredients: [
       "45 ml gin",
-      "45 ml vermut rojo (rosso)",
+      "45 ml Vermouth Rosso (rosso)",
       "1 dash de Aperitivo de angostura",
       "1 dash de licor de marrasquino"
     ],
-    liquor: ["Gin", "Vermut rojo", "Licor de marrasquino"],
+    liquor: ["Gin", "Vermouth Rosso", "Licor Maraschino"],
     description: [
       "Verter todos los ingredientes en un vaso mezclador con hielo.",
       "Revolver bien hasta enfriar.",
@@ -866,7 +869,7 @@ export const cocktailsData: CocktailData[] = [
       "Agua",
       "Hielo picado"
     ],
-    liquor: ["Bourbon"],
+    liquor: ["Whisky"],
     description: [
       "Machacar suavemente las hojas de menta con el jarabe simple en un vaso julep o vaso bajo.",
       "Llenar el vaso con hielo picado.",
@@ -887,7 +890,7 @@ export const cocktailsData: CocktailData[] = [
       "2 cucharaditas de azúcar",
       "Soda"
     ],
-    liquor: ["Ron blanco"],
+    liquor: ["Ron"],
     description: [
       "Macerar menta, azúcar y lima en vaso alto.",
       "Agregar hielo, ron y soda.",
@@ -922,9 +925,9 @@ export const cocktailsData: CocktailData[] = [
     ingredients: [
       "30 ml Gin",
       "30 ml Campari",
-      "30 ml vermut rosso"
+      "30 ml Vermouth Rosso"
     ],
-    liquor: ["Gin", "Campari", "vermut rosso"],
+    liquor: ["Gin", "Campari", "Vermouth Rosso"],
     description: [
       "Servir ingredientes en vaso old fashioned con hielo.",
       "Remover suavemente.",
@@ -943,7 +946,7 @@ export const cocktailsData: CocktailData[] = [
       "Float de vino tinto ",
       "Unas gotas de clara de huevo"
     ],
-    liquor: ["Whiskey", "Vino tinto"],
+    liquor: ["Whisky", "Vino"],
     description: [
       "Agregar whiskey, jugo de limón y jarabe simple en una coctelera con hielo.",
       "Agitar bien y colar en un vaso old fashioned con hielo.",
@@ -963,7 +966,7 @@ export const cocktailsData: CocktailData[] = [
       "1 cubo de azúcar",
       "Dash de agua"
     ],
-    liquor: ["Bourbon", "Rye whiskey"],
+    liquor: ["Whisky"],
     description: [
       "Disolver azúcar con bitters y un dash de agua en vaso old fashioned.",
       "Agregar hielo y whiskey.",
@@ -1002,7 +1005,7 @@ export const cocktailsData: CocktailData[] = [
       "30 ml Amaro Nonino",
       "30 ml jugo de limón"
     ],
-    liquor: ["Bourbon", "Aperol", "Amaro Nonino"],
+    liquor: ["Whisky", "Aperol"],
     description: [
       "Agregar todos los ingredientes en una coctelera con hielo.",
       "Agitar bien hasta enfriar.",
@@ -1021,7 +1024,7 @@ export const cocktailsData: CocktailData[] = [
       "22 ml jarabe de miel y jengibre",
       "Float de whisky ahumado (Islay)",
     ],
-    liquor: ["Scotch whisky", "Whisky ahumado"],
+    liquor: ["Whisky"],
     description: [
       "Agregar el Scotch, jugo de limón y jarabe de miel con jengibre en una coctelera con hielo.",
       "Agitar bien hasta enfriar.",
@@ -1062,7 +1065,7 @@ export const cocktailsData: CocktailData[] = [
       "60 ml Jugo de naranja",
       "15 ml Jarabe de granadina"
     ],
-    liquor: ["Ron oscuro"],
+    liquor: ["Ron"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en vaso alto con hielo.",
@@ -1082,7 +1085,7 @@ export const cocktailsData: CocktailData[] = [
       "15 ml jugo de lima",
       "30 ml espumante (servido aparte)"
     ],
-    liquor: ["Vodka de vainilla", "Licor de fruta de la pasión", "Espumante"],
+    liquor: ["Vodka", "Champagne"],
     description: [
       "Agregar todos los ingredientes excepto el espumante en una coctelera con hielo.",
       "Agitar enérgicamente hasta enfriar.",
@@ -1101,7 +1104,7 @@ export const cocktailsData: CocktailData[] = [
       "45 ml Scotch whisky",
       "25 ml Drambuie"
     ],
-    liquor: ["Scotch whisky", "Drambuie"],
+    liquor: ["Whisky", "Drambuie"],
     description: [
       "Servir ingredientes en vaso old fashioned con hielo.",
       "Remover suavemente."
@@ -1119,7 +1122,7 @@ export const cocktailsData: CocktailData[] = [
       "2 dashes Peychaud's bitters",
       "Twist de limón"
     ],
-    liquor: ["Rye whiskey", "Absenta"],
+    liquor: ["Whisky", "Absenta"],
     description: [
       "Enfriar vaso y descartarlo.",
       "Remojar vaso con absenta.",
@@ -1159,7 +1162,7 @@ export const cocktailsData: CocktailData[] = [
       "40 ml jugo de naranja",
       "40 ml jugo de arándanos"
     ],
-    liquor: ["Vodka", "Licor de durazno"],
+    liquor: ["Vodka", "Licor de Durazno"],
     description: [
       "Llenar un vaso highball con hielo.",
       "Agregar el vodka y el licor de durazno.",
@@ -1253,7 +1256,7 @@ export const cocktailsData: CocktailData[] = [
       "20 ml Vodka",
       "10 ml Lillet Blanc"
     ],
-    liquor: ["Gin", "Vodka", "Lillet Blanc"],
+    liquor: ["Gin", "Vodka", "Lillet"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa fría.",
@@ -1266,12 +1269,12 @@ export const cocktailsData: CocktailData[] = [
     img: whiskySour,
     flavor: ["Fresco", 'Cremoso'],
     ingredients: [
-      "45 ml Bourbon",
+      "45 ml Whiskey Bourbon",
       "30 ml Jugo de limón fresco",
       "15 ml de Almibar",
       "1 clara de huevo (opcional)"
     ],
-    liquor: ["Bourbon"],
+    liquor: ["Whisky"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa fría.",
@@ -1289,12 +1292,12 @@ export const cocktailsData: CocktailData[] = [
       "30 ml Ron oscuro",
       "15 ml Jugo de lima fresco",
       "15 ml de Almibar",
-      "7.5 ml Licor de fresa",
+      "7.5 ml Licor de Frutilla",
       "7.5 ml Triple sec",
       "60 ml Jugo de piña",
       "Un dash de Angostura bitters"
     ],
-    liquor: ["Ron blanco", "Ron dorado", "Ron oscuro", "Licor de fresa", "Triple sec"],
+    liquor: ["Ron", "Licor de Frutilla", "Triple sec"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en vaso grande con hielo.",
@@ -1309,9 +1312,9 @@ export const cocktailsData: CocktailData[] = [
     ingredients: [
       "30 ml Bourbon o Rye whiskey",
       "30 ml Campari",
-      "30 ml vermut rosso"
+      "30 ml Vermouth Rosso"
     ],
-    liquor: ["Bourbon", "Rye whiskey", "Campari", "vermut rosso"],
+    liquor: ["Whisky", "Campari", "Vermouth Rosso"],
     description: [
       "Servir ingredientes en vaso old fashioned con hielo.",
       "Remover suavemente.",
@@ -1326,7 +1329,7 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Fresco", 'Dulce'],
     ingredients: [
       "15 ml Vodka",
-      "15 ml Ginebra",
+      "15 ml Gin",
       "15 ml Ron blanco",
       "15 ml Tequila",
       "15 ml Triple sec (Cointreau)",
@@ -1334,7 +1337,7 @@ export const cocktailsData: CocktailData[] = [
       "30 ml de Almibar",
       "Cola para rellenar"
     ],
-    liquor: ["Vodka", "Ginebra", "Ron blanco", "Tequila", "Triple sec"],
+    liquor: ["Vodka", "Gin", "Ron", "Tequila", "Triple sec"],
     description: [
       "Agregar todos los licores, jugo de limón y jarabe en vaso con hielo.",
       "Rellenar con cola.",
@@ -1349,10 +1352,10 @@ export const cocktailsData: CocktailData[] = [
     flavor: ["Aperitivo", 'Seco', 'Herbal / Botánico'],
     ingredients: [
       "45 ml Scotch Whisky",
-      "25 ml vermut rosso",
+      "25 ml Vermouth Rosso",
       "2 gotas de Aperitivo de angostura"
     ],
-    liquor: ["Scotch Whisky", "vermut rosso"],
+    liquor: ["Whisky", "Vermouth Rosso"],
     description: [
       "Verter todos los ingredientes en vaso mezclador con hielo.",
       "Revolver bien y colar en copa de cóctel.",
@@ -1369,7 +1372,7 @@ export const cocktailsData: CocktailData[] = [
       "30 ml Cointreau",
       "20 ml Jugo de limón fresco"
     ],
-    liquor: ["Ginebra", "Cointreau"],
+    liquor: ["Gin", "Cointreau"],
     description: [
       "Batir todos los ingredientes con hielo.",
       "Colar en copa de cóctel fría.",
@@ -1386,7 +1389,7 @@ export const cocktailsData: CocktailData[] = [
       "20 ml licor de café",
       "30 ml crema de leche"
     ],
-    liquor: ["Vodka", "Licor de café"],
+    liquor: ["Vodka", "Licor de Café"],
     description: [
       "Llenar un vaso old fashioned con hielo.",
       "Agregar vodka y licor de café.",
@@ -1406,7 +1409,7 @@ export const cocktailsData: CocktailData[] = [
     "15 ml jugo de lima",
     "15 ml jarabe simple"
   ],
-  liquor: ["Ron blanco", "Apricot Brandy"],
+  liquor: ["Ron", "Apricot Brandy"],
   description: [
     "Agregar todos los ingredientes en una coctelera con hielo.",
     "Agitar enérgicamente hasta enfriar.",
@@ -1422,10 +1425,10 @@ export const cocktailsData: CocktailData[] = [
   flavor: ["Dulce", "Herbal / Botánico", 'Seco'],
   ingredients: [
     "60 ml gin",
-    "30 ml vermut rosso",
+    "30 ml Vermouth Rosso",
     "1 dash de angostura bitters (opcional)"
   ],
-  liquor: ["Gin", "Vermut rosso"],
+  liquor: ["Gin", "Vermouth Rosso"],
   description: [
     "Verter los ingredientes en un vaso mezclador con hielo.",
     "Remover hasta enfriar bien.",
@@ -1440,10 +1443,10 @@ export const cocktailsData: CocktailData[] = [
   flavor: ["Salado", "Seco"],
   ingredients: [
     "60 ml gin (o vodka)",
-    "10 ml vermut seco",
+    "10 ml Vermouth Dry",
     "10 ml jugo de aceitunas (salmuera)"
   ],
-  liquor: ["Gin", "Vermut seco"],
+  liquor: ["Gin", "Vermouth Dry"],
   description: [
     "Verter todos los ingredientes en un vaso mezclador con hielo.",
     "Remover bien hasta enfriar.",
@@ -1458,12 +1461,12 @@ export const cocktailsData: CocktailData[] = [
   flavor: ["Seco"],
   ingredients: [
     "70 ml gin",
-    "Rociar la copa con vermut seco (opcional)"
+    "Rociar la copa con Vermouth Dry (opcional)"
   ],
   liquor: ["Gin"],
   description: [
     "Enfriar una copa cóctel.",
-    "Rociar (o simplemente enjuagar) la copa con vermut seco, luego desechar el exceso.",
+    "Rociar (o simplemente enjuagar) la copa con Vermouth Dry, luego desechar el exceso.",
     "Servir el gin muy frío directamente en la copa.",
     "Decorar con un twist de limón o una aceituna (opcional)."
   ]
@@ -1475,11 +1478,11 @@ export const cocktailsData: CocktailData[] = [
   flavor: ["Seco"],
   ingredients: [
     "60 ml gin",
-    "10 ml vermut seco"
+    "10 ml Vermouth Dry"
   ],
-  liquor: ["Gin", "Vermut seco"],
+  liquor: ["Gin", "Vermouth Dry"],
   description: [
-    "Verter el gin y el vermut en un vaso mezclador con hielo.",
+    "Verter el gin y el Vermouth en un vaso mezclador con hielo.",
     "Remover hasta enfriar bien.",
     "Colar en una copa cóctel fría.",
     "Decorar con uno o dos cebollines."
@@ -1492,16 +1495,71 @@ export const cocktailsData: CocktailData[] = [
   flavor: ["Seco"],
   ingredients: [
     "50 ml gin",
-    "50 ml vermut seco"
+    "50 ml Vermouth Dry"
   ],
-  liquor: ["Gin", "Vermut seco"],
+  liquor: ["Gin", "Vermouth Dry"],
   description: [
-    "Agregar el gin y el vermut seco en un vaso mezclador con hielo.",
+    "Agregar el gin y el Vermouth Dry en un vaso mezclador con hielo.",
     "Remover hasta que esté bien frío.",
     "Colar en una copa cóctel.",
     "Decorar con un twist de limón o una aceituna, según preferencia."
   ]
 },
+{
+  id: 102,
+  name: "Gin Tonic",
+  img: gintonic,
+  flavor: ['Aperitivo', 'Herbal / Botánico'],
+  ingredients: [
+    "50 ml gin",
+    "100 ml agua tónica"
+  ],
+  liquor: ["Gin"],
+  description: [
+    "Llenar un vaso highball o copa balón con hielo.",
+    "Agregar el gin.",
+    "Completar con agua tónica bien fría.",
+    "Mezclar suavemente.",
+    "Decoracion a eleccion personal: (Limon, Pomelo, Pepino, Naranja, Menta, Romero, Albahaca, Pimienta, Frutos Rojos, etc.).",
+  ]
+},
+{
+  id: 103,
+  name: "Destornillador",
+  img: destornillador,
+  flavor: ["Dulce", "Frutal", "Fresco"],
+  ingredients: [
+    "50 ml vodka",
+    "100 ml jugo de naranja"
+  ],
+  liquor: ["Vodka"],
+  description: [
+    "Llenar un vaso highball con hielo.",
+    "Agregar el vodka.",
+    "Completar con jugo de naranja fresco.",
+    "Mezclar suavemente.",
+    "Decorar con una rodaja de naranja (opcional)."
+  ]
+},
+{
+  id: 104,
+  name: "Fernet con Coca",
+  img: fernetCola,
+  flavor: ["Aperitivo", "Herbal / Botánico"],
+  ingredients: [
+    "50 ml fernet",
+    "150 ml gaseosa cola"
+  ],
+  liquor: ["Fernet"],
+  description: [
+    "Llenar un vaso highball o de trago largo con mucho hielo.",
+    "Agregar el fernet.",
+    "Completar con gaseosa cola bien fría.",
+    "Mezclar suavemente.",
+  ]
+}
+
+
 
 
 ];

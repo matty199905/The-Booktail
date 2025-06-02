@@ -7,7 +7,7 @@ import type { CocktailData } from '../../../Data/cocktailsData'
 
 
 
-const CocktailCard: React.FC<CocktailData> = ({ img, name, flavor, ingredients, liquor, description }) => {
+const CocktailCard: React.FC<CocktailData> = ({ img, name, flavor, ingredients, liquor, description}) => {
 
 
   const selectedCocktail = {

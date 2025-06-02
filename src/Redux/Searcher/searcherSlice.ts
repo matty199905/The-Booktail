@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     searchValue: '',
     searchByLetter: '',
+    searchByLiquor: ''
 }
 
 const searcherSlice = createSlice({
@@ -21,9 +22,16 @@ const searcherSlice = createSlice({
                 ...state,
                 searchByLetter: state.searchByLetter === action.payload ? '' : action.payload
             }
-        }
+        },
+                setLiquor: (state, action) => {
+            return {
+                ...state,
+                searchByLiquor: action.payload 
+
+            }
+        },
     }
 }
 );
-export const { setSearchValue, setLetter } = searcherSlice.actions;
+export const { setSearchValue, setLetter, setLiquor } = searcherSlice.actions;
 export default searcherSlice.reducer
