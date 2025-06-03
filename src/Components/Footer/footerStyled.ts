@@ -9,11 +9,12 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+flex-wrap: wrap;
 gap: 10px;
 span {
     padding: 10px 20px;
     border-radius: 15px;
-background:  linear-gradient(var(--UI-Secondary),rgba(175, 135, 165, 0.47)) ;
+background-color: var(--UI-Secondary);
     backdrop-filter: blur(5px);
     color: white;
     box-shadow: 0 0 5px black;

@@ -9,6 +9,7 @@ align-items: center;
 flex-flow: row wrap;
 width: 100%;
 height: auto;
+margin-top: -50px;
 `
 
 
@@ -33,10 +34,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-gap: 60px;
-height: 400px;
+gap: 30px;
+height: 500px;
 width: 75%;
-padding: 40px 20px;
+padding: 20px 20px;
 margin-top: 50px;
 background: linear-gradient(to bottom,  var(--UI-Secondary), rgba(86, 86, 86, 0.39) );
 backdrop-filter: blur(5px);
