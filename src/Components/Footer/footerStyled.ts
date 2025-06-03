@@ -13,8 +13,9 @@ gap: 10px;
 span {
     padding: 10px 20px;
     border-radius: 15px;
-    background-color:  rgb(110, 46, 46);
-    color: rgb(255, 255, 255);
+background:  linear-gradient(var(--UI-Secondary),rgba(175, 135, 165, 0.47)) ;
+    backdrop-filter: blur(5px);
+    color: white;
     box-shadow: 0 0 5px black;
     letter-spacing: 1px;
 }

@@ -18,7 +18,7 @@ border-bottom-left-radius: 15px;
 border-bottom-right-radius: 15px;
 border-bottom: 1px solid rgba(255, 255, 255, 0.52);
 box-shadow: 0 0 10px black;
-background: linear-gradient(to bottom, rgb(52, 55, 98),rgb(86, 84, 191),rgb(86, 84, 191));
+background: linear-gradient(to bottom, rgb(24, 27, 58), rgb(41, 44, 86),var(--UI-Primary));
 `
 
 export const LogoContainer = styled.div`

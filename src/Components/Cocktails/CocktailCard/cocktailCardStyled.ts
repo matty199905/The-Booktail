@@ -10,7 +10,7 @@ gap: 17px;
 width: 230px;
 height: 330px;
 padding: 8px;
-background-color:   rgb(52, 55, 98);
+background:  linear-gradient(var(--UI-Primary),rgb(29, 15, 51)) ;
 border-radius: 15px;
 box-shadow: 0 0 20px black;
 transition: all 0.2s ease;

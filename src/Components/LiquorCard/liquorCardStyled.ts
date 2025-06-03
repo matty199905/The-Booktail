@@ -13,7 +13,7 @@ padding: 10px;
 border-radius: 15px;
 box-shadow: 0 0 20px black;
 transition: all 0.2s ease;
-background-color: rgb(52, 55, 98);
+background: linear-gradient(var(--UI-Primary),rgb(29, 15, 51)) ;
 &:hover {
     cursor: pointer;
     transform: scale(1.05);

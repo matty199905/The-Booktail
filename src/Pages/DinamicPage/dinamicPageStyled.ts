@@ -27,17 +27,17 @@ gap:20px;
 width: 70vw;
 height: 90vh;
 padding: 20px;
-background: linear-gradient(to bottom,  transparent, transparent,transparent, rgba(0, 0, 0, 0.28) );
+background: linear-gradient(to bottom,  var(--UI-Secondary), rgba(65, 65, 65, 0.46) );
+backdrop-filter: blur(5px);
 border-radius: 15px;
 box-shadow: 0 0 20px black;
-background-color: rgb(91, 41, 41)
 `
 
 export const Divider = styled.div`
 height: 106.5%;
 width: 2px;
 background-color: rgba(0, 0, 0, 0.59);
-box-shadow: 0 0 8px black;
+box-shadow: 0 0 5px black;
 `
 
 
@@ -76,7 +76,8 @@ align-items: center;
 gap: 30px;
 width: 100%;
 padding: 20px 30px;
-background-color: rgb(52, 55, 98);
+background:  linear-gradient(var(--UI-Primary),rgba(29, 15, 51, 0.65)) ;
+backdrop-filter: blur(5px);
 border: 2px solid rgba(0, 0, 0, 0.54);
 border-radius: 15px;
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.53);

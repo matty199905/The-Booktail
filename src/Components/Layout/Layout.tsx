@@ -1,7 +1,7 @@
 import React from 'react'
 import { LayoutWrapper } from './layoutStyled'
 import { useLocation } from 'react-router-dom'
-
+import LayoutImg from '../../Imgs/Layout/Layout.avif'
 
 
 type LayoutData = {
@@ -16,7 +16,7 @@ const dinamicPage = location.state?.page
 
 
   return (
-    <LayoutWrapper dinamicPage={dinamicPage}>
+    <LayoutWrapper dinamicPage={dinamicPage} style={{ backgroundImage: `url(${LayoutImg})` }}>
       {children}
     </LayoutWrapper>
   )

@@ -19,7 +19,7 @@ form{
     }
    }
    button {
-      background-color: rgba(0, 4, 255, 0.8)
+      background-color: rgb(56, 63, 158)
    }
    }
 `

@@ -38,9 +38,10 @@ height: 400px;
 width: 75%;
 padding: 40px 20px;
 margin-top: 50px;
-background-color:  rgb(63, 25, 25);
+background: linear-gradient(to bottom,  var(--UI-Secondary), rgba(86, 86, 86, 0.39) );
+backdrop-filter: blur(5px);
 border-radius:20px;
-box-shadow: 0 0 20px black;
+box-shadow: 0 0 20px rgba(56, 56, 56, 0.93);
 overflow: scroll;
 overflow-x: hidden;
 

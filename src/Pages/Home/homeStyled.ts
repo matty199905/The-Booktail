@@ -8,7 +8,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 background-position: center;
-background-size: contain;
+background-size: cover;
 width: 100vw;
 height: 100vh;
 margin: -180px 0;
@@ -29,9 +29,9 @@ justify-content:center;
 align-items: center;
 padding: 40px 50px;
 border-radius: 30px;
-background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(255, 160, 160, 0.57) );
-  backdrop-filter: blur(8px); 
-    box-shadow: 0px 0px 20px rgba(72, 72, 72, 0.72);
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.57), rgba(76, 112, 165, 0.42) );
+  backdrop-filter: blur(5px); 
+    box-shadow: -7px 0px 20px rgba(72, 72, 72, 0.72);
   margin-bottom: 120px;
 h2 {
   font-size: 20px;
@@ -54,15 +54,14 @@ gap: 17px;
    button{
     padding: 10px 20px;
     border-radius: 15px;
-    background-color: rgba(46, 46, 46, 0.47);
+    background-color: rgb(83, 97, 164);
     backdrop-filter: blur(7px);
     color: white;
      transition: all 0.2s ease;
     &:hover{
         transform: scale(1.1);
         transition: all 0.2s ease;
-        color: black;
-            background-color: rgba(255, 255, 255, 0.46);
+            background-color: var(--UI-Secondary);
     }
     }
 

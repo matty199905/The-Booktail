@@ -789,12 +789,11 @@ export const cocktailsData: CocktailData[] = [
     img: maiTai,
     flavor: ["Dulce", "Frutal", 'Tropical'],
     ingredients: [
-      "30 ml Ron blanco",
-      "30 ml Ron oscuro",
-      "15 ml Triple sec",
-      "30 ml Jugo de lima fresco",
-      "15 ml Jarabe de almendra",
-      "7.5 ml de Almibar"
+    "40 ml ron añejo",
+    "20 ml ron blanco",
+    "15 ml triple sec",
+    "10 ml jarabe de orgeat",
+    "10 ml jugo de lima fresco",
     ],
     liquor: ["Ron","Triple sec"],
     description: [

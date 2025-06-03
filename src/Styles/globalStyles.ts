@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 
+:root {
+  --UI-Primary: rgb(72, 68, 131);
+  --UI-Secondary: rgb(174, 89, 120);
+}
 
 * {
     margin: 0;
