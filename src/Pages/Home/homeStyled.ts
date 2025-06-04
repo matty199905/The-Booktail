@@ -17,9 +17,14 @@ margin: -180px 0;
 
 export const Title = styled.h1`
 font-size: 70px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-margin-bottom: 70px;
-font-family: none;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+margin: 0 30px 70px 30px ;
+font-family: serif;
+text-align: center;
+@media(max-width: 476px){
+  font-size: 55px;
+  margin: 50px 30px 40px 30px;
+}
 `
 
 export const SearchBy_Wrapper = styled.div`
@@ -27,17 +32,23 @@ display: flex;
 flex-direction: column;
 justify-content:center;
 align-items: center;
+max-width: 400px;
+margin: 0 20px;
 padding: 40px 50px;
 border-radius: 30px;
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.57), rgba(113, 157, 224, 0.4) );
-  backdrop-filter: blur(5px); 
-    box-shadow: -7px 0px 20px rgba(72, 72, 72, 0.72);
-  margin-bottom: 120px;
+backdrop-filter: blur(5px); 
+box-shadow: -7px 0px 20px rgba(72, 72, 72, 0.72);
+margin-bottom: 120px;
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight:100;
   letter-spacing: 1px;
     margin-bottom: 28px;
+    text-align: center;
+    @media(max-width:390px){
+      font-size: 16px;
+    }
 }
 `
 

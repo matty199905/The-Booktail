@@ -40,7 +40,7 @@ export const GlobalStyles = createGlobalStyle`
   
 body {   
     background-color: #2c2c2c;
-font-family: Arial, Helvetica, sans-serif;
+font-family: sans-serif;
 letter-spacing: 1px;
     color: white;
   }

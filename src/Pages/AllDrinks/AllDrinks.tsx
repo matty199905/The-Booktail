@@ -10,13 +10,6 @@ import { useSelectorTS } from '../../Redux/store'
 
 const AllDrinks: React.FC = () => {
 
-  const letter = useSelectorTS(state => state.Searcher.searchByLetter)
-
-  useEffect(()=>{
-    if(letter !== ''){
-      window.scrollTo(0,200)
-    }
-  },[letter])
 
   return (
 

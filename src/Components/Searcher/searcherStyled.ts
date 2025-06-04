@@ -7,6 +7,7 @@ form{
      display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap-reverse;
       gap: 10px;
    input{ 
       width: 200px;
