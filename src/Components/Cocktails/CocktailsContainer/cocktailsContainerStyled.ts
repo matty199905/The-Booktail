@@ -7,11 +7,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: flex-start;
-height: auto;
 gap: 25px;
 width: 100%;
+height: auto;
+
 h1{
     font-size: 45px;
+    margin: 0 30px;
+    text-align: center;
+    @media(max-width:500px){
+        font-size: 40px;
+    }
 }
 `
 
@@ -39,6 +45,9 @@ gap: 10px;
 
 export const ToggleBtn = styled.button`
 font-size: 18px;
+    @media(max-width:500px){
+        font-size: 17px;
+    }
 `
 
 type Icon_DropDownProps = {
@@ -102,4 +111,9 @@ gap: 40px;
 height: auto;
 width: 100%;
 margin-top: 50px;
+padding: 0 40px;
+@media(max-width:500px) {
+  gap: 15px;
+  margin-top: 40px;
+}
 `

@@ -24,7 +24,13 @@ h3 {
 text-align: center;
 font-size: 16px;
 }
-
+@media (max-width:490px){
+    width: 250px;
+    height: 340px;
+    h3{
+        font-size: 20px;
+    }
+}
 `
 
 type imgContainerProps = {
@@ -38,5 +44,7 @@ background-image: ${(props) => (props.img ? `url(${props.img})` : 'none'
     )};
 background-size: cover;
 background-position: center;
-
+@media (max-width:490px){
+height: 85%;
+    }
 `

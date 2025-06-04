@@ -7,7 +7,6 @@ form{
      display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap-reverse;
       gap: 10px;
    input{ 
       width: 200px;
@@ -16,7 +15,10 @@ form{
     border: none;
     &:focus{
          outline: none;
-    border: none;
+         border: none;
+    }
+    @media(max-width:430px){
+      width: 160px;
     }
    }
    button {

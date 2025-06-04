@@ -18,11 +18,15 @@ const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   if(location.pathname !== '/') navigate('/bySearch')
 }
 
+const handleOnSubmit = (e:  React.FormEvent<HTMLFormElement>) => { 
+  e.preventDefault(); 
+  if(searchValue === '') {return}
+  navigate('/bySearch'); }
 
   return (
     <SearcherContainer>
 
-      <form onSubmit={(e) => { e.preventDefault(); navigate('/bySearch'); }}>
+      <form onSubmit={(e) => handleOnSubmit(e)}>
         <input
           type="search"
           placeholder='Ingrese su cocktail aqui...'

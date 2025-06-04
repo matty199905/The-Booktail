@@ -14,6 +14,8 @@ width: 100%;
 min-height: 100vh;
 height: auto;
 padding: ${(props)=>(props.dinamicPage ? '0px' : '180px 0px')};
-background-position: center;
-background-size: cover;
+background-size: contain;
+@media(max-width:500px) {
+padding-bottom: 110px;
+}
 `

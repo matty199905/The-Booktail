@@ -47,8 +47,8 @@ ul {
     margin: 0 20px;
     padding: 20px 20px;
     border-radius: 30px;
-    background: rgba(88, 88, 88, 0.09) ;
-    backdrop-filter: blur(7px);
+    background: rgba(0, 149, 255, 0.1) ;
+    backdrop-filter: blur(5px);
     box-shadow: 0 0 10px black;
     button{
         width: 25px;

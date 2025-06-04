@@ -40,15 +40,16 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0.57), rgba(113, 157, 224, 
 backdrop-filter: blur(5px); 
 box-shadow: -7px 0px 20px rgba(72, 72, 72, 0.72);
 margin-bottom: 120px;
+@media(max-width:390px){
+  font-size: 16px;
+  padding: 30px 30px;
+}
 h2 {
   font-size: 18px;
   font-weight:100;
   letter-spacing: 1px;
     margin-bottom: 28px;
     text-align: center;
-    @media(max-width:390px){
-      font-size: 16px;
-    }
 }
 `
 
