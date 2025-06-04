@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import CocktailsContainer from '../../Components/Cocktails/CocktailsContainer/CocktailsContainer'
-import { useSelectorTS } from '../../Redux/store'
+
 
 
 
