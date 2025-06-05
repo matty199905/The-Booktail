@@ -5,7 +5,14 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { setSearchValue } from '../../Redux/Searcher/searcherSlice';
 import { useDispatch } from 'react-redux';
 
-const Searcher: React.FC = () => {
+
+
+export type SearcherProps = {
+  navbar?: boolean
+  responsive?: boolean
+}
+
+const Searcher: React.FC<SearcherProps> = ({navbar}) => {
 
   const { searchValue } = useSelectorTS(state => state.Searcher);
   const location = useLocation()
@@ -24,7 +31,7 @@ const handleOnSubmit = (e:  React.FormEvent<HTMLFormElement>) => {
   navigate('/bySearch'); }
 
   return (
-    <SearcherContainer>
+    <SearcherContainer navbar={navbar}>
 
       <form onSubmit={(e) => handleOnSubmit(e)}>
         <input

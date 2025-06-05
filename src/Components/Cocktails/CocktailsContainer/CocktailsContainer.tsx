@@ -107,7 +107,6 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                             'Tropical',
                             'Frutal',
                             'Floral',
-                            'Especiado',
                             'Herbal / Botánico',
                             'Cremoso',
                             'Sparkling',

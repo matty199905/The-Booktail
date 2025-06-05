@@ -13,32 +13,30 @@ height: 330px;
 padding: 6px;
 background:  linear-gradient(var(--UI-Primary),rgb(29, 15, 51)) ;
 border-radius: 15px;
-box-shadow: 0 0 20px black;
+box-shadow: inset 0 0 10px black;
 transition: all 0.2s ease;
 &:hover {
     cursor: pointer;
     transform: scale(1.05);
     transition: all 0.2s ease;
-    box-shadow: 0 0 10px black;
+    box-shadow: inset 0 0 10px black;
 }
 h3 {
 text-align: center;
+font-size: 16px;
 }
 @media(max-width:580px) {
     width: 190px;
     height: 280px;
 }
-@media(max-width:500px) {
-    display: flex;
-    flex-direction: row;
-    width: 90vw;
-    height: 120px;
-    gap: 20px;
-    padding: 3px;
+@media(max-width:500px){
+    width:152px;
+    height: 230px;
+    padding: 3.5px;
     h3{
         font-size: 16px;
-        max-width: 100px;
-        text-align: left;
+        font-weight: 500;
+   margin-bottom: 10px;
     }
 }
 `
@@ -54,21 +52,7 @@ background-image: ${(props) => (props.img ? `url(${props.img})` : 'none'
     )};
 background-size: cover;
 background-position: bottom;
-@media(max-width:500px) {
-width: 25%;
-height: 100%;
-}
-`
-
-
-export const ArrowResponsiveIcon = styled.div`
-display: none;
-@media(max-width:500px) {
-display: flex;
-position: absolute;
-right: 20px;
-top: 35%;
-font-size: 40px;
-color: rgba(255, 255, 255, 0.71);
+@media(max-width:500px){
+height: 90%;
 }
 `

@@ -75,7 +75,7 @@ import fernetCola from '../../src/Imgs/Cocktails/fernet-con-coca.webp'
 import destornillador from '../../src/Imgs/Cocktails/destornillador.jpg'
 import gintonic from '../../src/Imgs/Cocktails/gintonic.avif'
 
-type FlavorsData = 'Aperitivo' | 'Dulce' | 'Fresco' | 'Tropical' | 'Frutal' | 'Floral' | 'Especiado' | 'Herbal / Botánico' | 'Cremoso' | 'Sparkling' | 'Seco' | 'Picante' | 'Salado' |'Cítrico'
+type FlavorsData = 'Aperitivo' | 'Dulce' | 'Fresco' | 'Tropical' | 'Frutal' | 'Floral' | 'Herbal / Botánico' | 'Cremoso' | 'Sparkling' | 'Seco' | 'Picante' | 'Salado' |'Cítrico'
 
 export type CocktailData = {
   id: number,

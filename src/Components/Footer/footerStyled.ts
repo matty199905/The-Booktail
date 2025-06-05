@@ -16,6 +16,7 @@ justify-content: center;
 align-items: center;
 flex-wrap: wrap;
 gap: 10px;
+z-index: 4;
 .footer_title {
     margin-bottom: ${(props)=>(props.hidden === true ? '-65px' : '0')};
     padding: 10px 20px;
@@ -23,7 +24,7 @@ gap: 10px;
     background-color: var(--UI-Secondary);
     backdrop-filter: blur(5px);
     color: white;
-    box-shadow: 0 0 5px black;
+    box-shadow: inset 0 0 5px black;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.7s ease;
@@ -49,7 +50,7 @@ ul {
     border-radius: 30px;
     background: rgba(0, 149, 255, 0.1) ;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px black;
+    box-shadow: inset 0 0 10px black;
     button{
         width: 25px;
         font-size: 20px;

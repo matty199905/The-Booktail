@@ -1,7 +1,7 @@
 import React from 'react'
-import { LayoutWrapper } from './layoutStyled'
+import { BluredLayout, LayoutWrapper } from './layoutStyled'
 import { useLocation } from 'react-router-dom'
-import LayoutImg from '../../Imgs/Layout/Layout.avif'
+
 
 
 type LayoutData = {
@@ -9,15 +9,20 @@ type LayoutData = {
 }
 
 
-const Layout: React.FC<LayoutData> = ({children}) => {
-const location = useLocation()
-
-const dinamicPage = location.state?.page
+const Layout: React.FC<LayoutData> = ({ children }) => {
+  const location = useLocation()
+  const dinamicPage = location.state?.page
 
 
   return (
-    <LayoutWrapper dinamicPage={dinamicPage} style={{ backgroundImage: `url(${LayoutImg})` }}>
+    <LayoutWrapper dinamicPage={dinamicPage}>
+      {
+        location.pathname !== '/' &&
+        <BluredLayout dinamicPage={dinamicPage} />
+      }
+
       {children}
+
     </LayoutWrapper>
   )
 }

@@ -12,6 +12,7 @@ background-size: cover;
 width: 100vw;
 height: 100vh;
 margin: -180px 0;
+z-index: 3;
 `
 
 
@@ -38,7 +39,7 @@ padding: 40px 50px;
 border-radius: 30px;
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.57), rgba(113, 157, 224, 0.4) );
 backdrop-filter: blur(5px); 
-box-shadow: -7px 0px 20px rgba(72, 72, 72, 0.72);
+box-shadow: inset -7px 0px 20px rgba(72, 72, 72, 0.72);
 margin-bottom: 120px;
 @media(max-width:390px){
   font-size: 16px;

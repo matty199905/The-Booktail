@@ -10,7 +10,7 @@ justify-content: flex-start;
 gap: 25px;
 width: 100%;
 height: auto;
-
+z-index: 3;
 h1{
     font-size: 45px;
     margin: 0 30px;
@@ -69,9 +69,10 @@ export const DropDownMenuContainer = styled.div<Icon_DropDownProps>`
 width: ${(props) => (props.dropDown === true ? '100%' : '0')};
 height: ${(props) => (props.dropDown === true ? '200px' : '0')};;
 margin:20px 0 -30px 0;
-background-color: rgb(38, 38, 38);
+ background: rgba(0, 68, 116, 0.1) ;
+ backdrop-filter: blur(5px);
 border-radius: 15px;
-box-shadow: 0 0 10px black;
+box-shadow:inset 0 0 10px rgba(75, 75, 75, 0.57);
 overflow-y : scroll;
 transition: all 0.3s ease;
 &::-webkit-scrollbar{background-color: transparent}
@@ -114,6 +115,7 @@ margin-top: 50px;
 padding: 0 40px;
 @media(max-width:500px) {
   gap: 15px;
-  margin-top: 40px;
+  padding: 0 0px;
+  margin-top: 30px ;
 }
 `

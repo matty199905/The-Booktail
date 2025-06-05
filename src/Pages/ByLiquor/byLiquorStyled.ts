@@ -10,6 +10,7 @@ flex-flow: row wrap;
 width: 100%;
 height: auto;
 margin-top: -50px;
+z-index: 3;
 `
 
 
@@ -42,7 +43,7 @@ margin-top: 50px;
 background: linear-gradient(to bottom,  var(--UI-Secondary), rgba(86, 86, 86, 0.39) );
 backdrop-filter: blur(5px);
 border-radius:20px;
-box-shadow: 0 0 20px rgba(56, 56, 56, 0.93);
+box-shadow:inset 0 0 20px rgba(158, 158, 158, 0.61);
 overflow: scroll;
 overflow-x: hidden;
 

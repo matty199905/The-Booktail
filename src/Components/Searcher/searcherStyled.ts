@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import type { SearcherProps } from "./Searcher";
 
 
-export const SearcherContainer = styled.div`
+
+
+export const SearcherContainer = styled.div<SearcherProps>`
 align-self: flex-end;
 form{
      display: flex;
@@ -13,16 +16,18 @@ form{
     padding: 10px 15px;
     border-radius:15px;
     border: none;
+    margin-bottom: ${(props)=>(props.navbar === true ? '10px': '0')};
+    
     &:focus{
          outline: none;
          border: none;
-    }
-    @media(max-width:430px){
-      width: 160px;
     }
    }
    button {
       background-color:  rgb(83, 97, 164)
    }
    }
+      @media(max-width:850px){
+      display: ${(props)=>(props.navbar === true ? 'none': 'flex')};
+    }
 `

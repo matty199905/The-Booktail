@@ -6,7 +6,7 @@ import styled from "styled-components";
 export const IconContainer = styled.div`
 position: absolute;
 top: 40px;
-left: 40px;
+left: 20px;
 width: 50px;
 font-size: 50px;
 transform: rotate(90deg);
@@ -30,7 +30,8 @@ padding: 20px;
 background: linear-gradient(to bottom,  var(--UI-Secondary), rgba(65, 65, 65, 0.46) );
 backdrop-filter: blur(5px);
 border-radius: 15px;
-box-shadow: 0 0 20px black;
+box-shadow:inset 0 0 20px black;
+z-index: 3;
 `
 
 export const Divider = styled.div`
@@ -80,7 +81,7 @@ background:  linear-gradient(var(--UI-Primary),rgba(29, 15, 51, 0.65)) ;
 backdrop-filter: blur(5px);
 border: 2px solid rgba(0, 0, 0, 0.54);
 border-radius: 15px;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.53);
+box-shadow:inset 0 0 20px rgba(0, 0, 0, 0.53);
 h3 {align-self:flex-start}
 ul {
     display: flex;

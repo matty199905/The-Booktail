@@ -22,13 +22,13 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(27, 27, 27);
+  background: transparent;
 
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgb(104, 104, 104); 
-  border: 3px solid  rgb(27, 27, 27);
+  border: 1px solid  black;
   border-radius: 15px;
     &:hover {
     cursor: grab;
