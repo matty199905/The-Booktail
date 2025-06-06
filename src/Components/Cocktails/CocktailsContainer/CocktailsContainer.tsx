@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { DropDownBtnContainer, CocktailsRenderContainer, CocktailsWrapper, DeleteFilter, DropDownContainer, DropDownMenuContainer, IconContainer, BtnsContainer, ToggleBtn } from './cocktailsContainerStyled'
 import { IoIosArrowDown } from "react-icons/io";
 import { useSelectorTS, type AppDispatch } from '../../../Redux/store';
 import CocktailCard from '../CocktailCard/CocktailCard';
 import { useLocation } from 'react-router-dom';
-import { resetValues, setFalvor, setLetter } from '../../../Redux/Searcher/searcherSlice';
+import { resetValues, setFalvor} from '../../../Redux/Searcher/searcherSlice';
 import { useDispatch } from 'react-redux';
 
 
