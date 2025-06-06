@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     searchValue: '',
     searchByLetter: '',
-    searchByLiquor: ''
+    searchByLiquor: '',
+    searchByFlavor: '',
 }
 
 const searcherSlice = createSlice({
@@ -15,7 +16,8 @@ const searcherSlice = createSlice({
                 ...state,
                 searchValue: action.payload,
                 searchByLetter: '',
-                searchByLiquor: ''
+                searchByLiquor: '',
+                searchByFlavor: '',
 
             }
         },
@@ -24,7 +26,8 @@ const searcherSlice = createSlice({
                 ...state,
                 searchByLetter: state.searchByLetter === action.payload ? '' : action.payload,
                 searchValue: '',
-                searchByLiquor: ''
+                searchByLiquor: '',
+                searchByFlavor: '',
             }
         },
         setLiquor: (state, action) => {
@@ -33,6 +36,17 @@ const searcherSlice = createSlice({
                 searchByLiquor: action.payload,
                 searchValue: '',
                 searchByLetter: '',
+                searchByFlavor: '',
+
+            }
+        },
+        setFalvor: (state, action) => {
+            return {
+                ...state,
+                searchByLiquor: '',
+                searchValue: '',
+                searchByLetter: '',
+                searchByFlavor: action.payload,
 
             }
         },
@@ -42,11 +56,12 @@ const searcherSlice = createSlice({
                 searchByLiquor: '',
                 searchValue: '',
                 searchByLetter: '',
+                searchByFlavor: '',
 
             }
         },
     }
 }
 );
-export const { setSearchValue, setLetter, setLiquor, resetValues } = searcherSlice.actions;
+export const { setSearchValue, setLetter, setLiquor, setFalvor, resetValues } = searcherSlice.actions;
 export default searcherSlice.reducer

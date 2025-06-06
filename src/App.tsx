@@ -12,7 +12,6 @@ const App: React.FC = () => {
 
 const location = useLocation()
 
-console.log(location);
 
   return (
 

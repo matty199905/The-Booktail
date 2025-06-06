@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
       <LettersContainer
         animate={{ y: hideLetters ? 200 : 0}}
         initial={false}
-        transition={{ type: 'spring', damping: 20 }}
+        transition={{ type: 'spring', damping: 15 }}
       >
         <ul>
           {letters.map((item) => (

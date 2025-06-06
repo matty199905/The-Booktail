@@ -27,7 +27,7 @@ z-index: 4;
     box-shadow: inset 0 0 5px black;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: all 0.7s ease;
+    transition: all 0.3s ease;
     @media (max-width: 560px) {
          margin-bottom: ${(props)=>(props.hidden === true ? '-120px' : '0')};
     }

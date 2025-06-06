@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { DropDownBtnContainer, CocktailsRenderContainer, CocktailsWrapper, DeleteFilter, DropDownContainer, DropDownMenuContainer, IconContainer, BtnsContainer, ToggleBtn } from './cocktailsContainerStyled'
 import { IoIosArrowDown } from "react-icons/io";
 import { useSelectorTS, type AppDispatch } from '../../../Redux/store';
 import CocktailCard from '../CocktailCard/CocktailCard';
 import { useLocation } from 'react-router-dom';
-import { resetValues } from '../../../Redux/Searcher/searcherSlice';
+import { resetValues, setFalvor, setLetter } from '../../../Redux/Searcher/searcherSlice';
 import { useDispatch } from 'react-redux';
 
 
@@ -20,11 +20,12 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
     const { searchValue } = useSelectorTS(state => state.Searcher);
     const { searchByLiquor } = useSelectorTS(state => state.Searcher);
     const { searchByLetter } = useSelectorTS(state => state.Searcher);
+    const { searchByFlavor } = useSelectorTS(state => state.Searcher);
     const [dropDown, setDropDown] = useState(false);
-    const [activeFilter, setActiveFilter] = useState('')
     const letter = useSelectorTS(state => state.Searcher.searchByLetter);
     const location = useLocation()
     const dispatch = useDispatch<AppDispatch>()
+
 
 
     const renderAll =
@@ -55,15 +56,22 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
 
     const renderByFlavors =
         Cocktails
-            .filter((items) => { if (items.flavor?.some((flavor) => flavor === activeFilter)) { return items } })
+            .filter((items) => { if (items.flavor?.some((flavor) => flavor === searchByFlavor)) { return items } })
             .map(items => <CocktailCard {...items} key={items.id} />);
 
 
     const renderByLiquors =
         Cocktails
-            .filter((item) => { if (item.liquor.find((item)=> item === searchByLiquor) ) { return item } })
+            .filter((item) => { if (item.liquor.find((item) => item === searchByLiquor)) { return item } })
             .map((item) => { return <CocktailCard {...item} key={item.id} /> })
 
+
+    const onClickFlavorHandler = (item: string) => {
+
+        dispatch(setFalvor(item));
+        setDropDown(false);
+        
+    }
 
 
     return (
@@ -80,7 +88,7 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                     <DropDownBtnContainer onClick={() => setDropDown(!dropDown)}>
 
                         <ToggleBtn>
-                            {!activeFilter ? '¿No sabes que tomar?' : activeFilter}
+                            {!searchByFlavor ? '¿No sabes que tomar?' : searchByFlavor}
                         </ToggleBtn>
                         <IconContainer
                             dropDown={dropDown}>
@@ -90,7 +98,7 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                     </DropDownBtnContainer>
                     {
 
-                        (activeFilter || searchByLiquor || searchByLetter) && <DeleteFilter onClick={() => {setActiveFilter(''); dispatch(resetValues())}}>Borrar Filtro</DeleteFilter>
+                        (searchByFlavor || searchByLiquor || searchByLetter) && <DeleteFilter onClick={() => { setFalvor(''); dispatch(resetValues()) }}>Borrar Filtro</DeleteFilter>
                     }
 
                 </BtnsContainer>
@@ -116,9 +124,9 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                             'Cítrico',
                         ].map((item, index) => (
                             <li
-                                onClick={() => { setActiveFilter(item); setDropDown(false) }}
+                                onClick={() => { onClickFlavorHandler(item) }}
                                 key={index}
-                                className={(activeFilter === item) ? 'active' : ''}>{item}</li>
+                                className={(searchByFlavor === item) ? 'active' : ''}>{item}</li>
                         ))}
                     </ul>
                 </DropDownMenuContainer>
@@ -133,11 +141,11 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
             <CocktailsRenderContainer>
 
                 {location.pathname === '/cocktails' && (
-                    activeFilter !== ''
+                    searchByFlavor !== ''
                         ? renderByFlavors
                         : (letter !== ''
                             ? renderByLetter : searchByLiquor !== '' ? renderByLiquors
-                            : renderAll)
+                                : renderAll)
                 )}
 
                 {location.pathname === '/bySearch' && renderSearched}
