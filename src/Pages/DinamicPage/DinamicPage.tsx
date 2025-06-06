@@ -28,7 +28,7 @@ const DinamicPage: React.FC = () => {
 
 <FlavorsData>
   <h3>Sabor:</h3>
-  <ul>{data.flavor.map((item: string[])=> <li>--{item}--</li>)}</ul>
+  <ul>{data.flavor.map((item: string[])=> <li>{item}</li>)}</ul>
 </FlavorsData>
 
 <IngredientsData>

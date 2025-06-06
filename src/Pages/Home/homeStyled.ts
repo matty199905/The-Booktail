@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Hero from '../../Imgs/Hero/wallpaper.jpg'
 
 
 export const HomeWrapper = styled.main`
@@ -7,6 +7,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+background-image: url(${Hero});
 background-position: center;
 background-size: cover;
 width: 100vw;
@@ -41,6 +42,7 @@ backdrop-filter: blur(5px);
 box-shadow: inset -7px 0px 20px rgba(72, 72, 72, 0.72);
 margin-bottom: 120px;
 @media(max-width:390px){
+  width: 95vw;
   font-size: 16px;
   padding: 30px 30px;
 }

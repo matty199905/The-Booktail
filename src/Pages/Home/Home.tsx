@@ -1,6 +1,5 @@
 import React from 'react'
 import { HomeWrapper, SearchBy_Container, SearchBy_Wrapper, Title } from './homeStyled'
-import Hero from '../../Imgs/Hero/wallpaper.jpg'
 import Footer from '../../Components/Footer/Footer'
 import { useNavigate } from 'react-router'
 import Searcher from '../../Components/Searcher/Searcher'
@@ -11,7 +10,7 @@ const Home: React.FC = () => {
 
 
   return (
-    <HomeWrapper style={{ backgroundImage: `url(${Hero})` }}>
+    <HomeWrapper>
 
       <Title>The BookTail</Title>
 

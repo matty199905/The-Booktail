@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import LayoutImg from '../../Imgs/Layout/Layout.avif'
+
+
+
 type LayoutProps = {
-    dinamicPage: string
+    dinamicPage: string,
+    wallpaperTrue?: boolean
 }
 
 export const LayoutWrapper = styled.div<LayoutProps>`
@@ -13,7 +17,7 @@ align-items: center;
 width: 100%;
 min-height: 100vh;
 height: auto;
-background-image: url(${LayoutImg});
+background-image:${(props)=>(props.wallpaperTrue ? `url(${LayoutImg})` : 'none')};
 background-attachment: fixed;
 background-size: contain;
 z-index: 0;
