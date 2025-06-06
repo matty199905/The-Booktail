@@ -10,6 +10,7 @@ justify-content: flex-start;
 gap: 25px;
 width: 100%;
 height: auto;
+margin-top: 180px;
 z-index: 3;
 h1{
     font-size: 45px;
@@ -18,6 +19,9 @@ h1{
     @media(max-width:500px){
         font-size: 40px;
     }
+}
+@media(max-width:500px) {
+    padding-bottom: 110px;
 }
 `
 

@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
               </>
             }
 
-           <li><Searcher responsive={true}/></li>
+           <li><Searcher onKeyDown={(e)=>{if(e.key === 'Enter'){setOpenMenu(false)}}}/></li>
 
           </ul>
 

@@ -13,16 +13,17 @@ height: 330px;
 padding: 6px;
 background:  linear-gradient(var(--UI-Primary),rgb(29, 15, 51)) ;
 border-radius: 15px;
-box-shadow: inset 0 0 10px black;
+box-shadow: inset 0 0 20px black;
 transition: all 0.2s ease;
 &:hover {
     cursor: pointer;
     transform: scale(1.05);
     transition: all 0.2s ease;
-    box-shadow: inset 0 0 10px black;
+    box-shadow: 0 0 10px black;
 }
 h3 {
 text-align: center;
+
 font-size: 16px;
 }
 @media(max-width:580px) {

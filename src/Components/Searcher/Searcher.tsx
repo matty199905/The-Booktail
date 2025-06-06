@@ -8,11 +8,11 @@ import { useDispatch } from 'react-redux';
 
 
 export type SearcherProps = {
-  navbar?: boolean
-  responsive?: boolean
+  navbar?: boolean,
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
 }
 
-const Searcher: React.FC<SearcherProps> = ({navbar}) => {
+const Searcher: React.FC<SearcherProps> = ({navbar, onKeyDown}) => {
 
   const { searchValue } = useSelectorTS(state => state.Searcher);
   const location = useLocation()
@@ -30,6 +30,9 @@ const handleOnSubmit = (e:  React.FormEvent<HTMLFormElement>) => {
   if(searchValue === '') {return}
   navigate('/bySearch'); }
 
+
+
+
   return (
     <SearcherContainer navbar={navbar}>
 
@@ -39,6 +42,7 @@ const handleOnSubmit = (e:  React.FormEvent<HTMLFormElement>) => {
           placeholder='Ingrese su cocktail aqui...'
           onChange={(e) => handleOnChange(e)}
           value={searchValue}
+          onKeyDown={onKeyDown}
         />
         {
           location.pathname === '/' &&

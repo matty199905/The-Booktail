@@ -11,7 +11,6 @@ background-position: center;
 background-size: cover;
 width: 100vw;
 height: 100vh;
-margin: -180px 0;
 z-index: 3;
 `
 

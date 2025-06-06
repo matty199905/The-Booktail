@@ -11,7 +11,7 @@ width: 180px;
 height: 220px;
 padding: 10px;
 border-radius: 15px;
-box-shadow: 0 0 20px black;
+box-shadow: inset 0 0 20px rgb(0, 0, 0);
 transition: all 0.2s ease;
 background: linear-gradient(var(--UI-Primary),rgb(29, 15, 51)) ;
 &:hover {
@@ -24,11 +24,21 @@ h3 {
 text-align: center;
 font-size: 16px;
 }
-@media (max-width:490px){
-    width: 250px;
-    height: 340px;
+@media (max-width:520px){
+    width: 150px;
+    height: 200px;
+    padding: 8px;
     h3{
-        font-size: 20px;
+        font-size: 16px;
+    }
+    @media(max-width:449px){
+    width: 130px;
+    height: 180px;
+    }
+        @media(max-width:380px){
+    width: 120px;
+    height: 180px;
+    padding: 6px;
     }
 }
 `

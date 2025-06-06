@@ -36,6 +36,14 @@ const ByLiquor: React.FC = () => {
 
         </LiquorContainer>
 
+        <LiquorContainer>
+          <h2>Licores</h2>
+
+          <LiquorsRender>
+            {renderLiquorCards('Licores')}
+          </LiquorsRender>
+
+        </LiquorContainer>
 
         <LiquorContainer>
           <h2>Vermouth y Aperitivos</h2>
@@ -47,20 +55,12 @@ const ByLiquor: React.FC = () => {
         </LiquorContainer>
 
 
-        <LiquorContainer>
-          <h2>Licores</h2>
-
-          <LiquorsRender>
-            {renderLiquorCards('Licores')}
-          </LiquorsRender>
-
-        </LiquorContainer>
 
 
         <LiquorContainer>
           <h2>Vinos y Espumantes</h2>
 
-          <LiquorsRender>
+          <LiquorsRender wine={true}>
             {renderLiquorCards('Vinos y Espumantes')}
           </LiquorsRender>
 
