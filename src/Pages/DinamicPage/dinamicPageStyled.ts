@@ -135,7 +135,7 @@ flex-wrap: wrap;
 width: 105%;
 margin-left: 20px;
 padding: 20px 30px;
-background:  linear-gradient(rgb(72, 68, 131),rgba(29, 15, 51, 0.65)) ;
+background:  linear-gradient(var(--UI-Primary),rgba(29, 15, 51, 0.65)) ;
 backdrop-filter: blur(5px);
 border: 2px solid rgba(0, 0, 0, 0.54);
 border-radius: 15px;
@@ -161,7 +161,7 @@ list-style: none;
     margin-left: 0;}
     }
     @media(max-width:550px) {
-   background:  linear-gradient(rgba(144, 144, 144, 0.23)) ;
+   background:  linear-gradient(rgba(144, 144, 144, 0.23),rgba(144, 144, 144, 0.23)) !important;
    backdrop-filter: blur(3px);
 }
 
