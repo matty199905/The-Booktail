@@ -118,7 +118,7 @@ flex-flow: row wrap;
 gap: 15px;
 width: 110%;
 padding-top: 10px;
-margin-left: 25px;
+margin-left: -10px;
 h1{
 z-index: 2;
 margin-left: 40px;

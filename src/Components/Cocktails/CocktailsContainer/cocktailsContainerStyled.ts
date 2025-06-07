@@ -36,10 +36,16 @@ export const BtnsContainer = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+flex-wrap: wrap;
 gap: 10px;
-background-color: rgb(20, 20, 20);
+margin: 0 20px;
 padding: 10px 20px;
+background-color: rgb(20, 20, 20);
 border-radius: 10px;
+@media(max-width:413px){
+    width: 280px;
+    padding: 15px;
+}
 `
 
 export const DropDownBtnContainer = styled.div`

@@ -24,7 +24,7 @@ font-family: serif;
 text-align: center;
 @media(max-width: 476px){
   font-size: 55px;
-  margin: 50px 30px 40px 30px;
+  margin: 0px 30px 40px 30px;
 }
 `
 
