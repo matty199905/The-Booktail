@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { DescriptionData, DetailsContainer, DinamicPageContainer, Divider, FlavorsData, IconContainer, ImgContainer, IngredientsData } from './dinamicPageStyled';
 import { IoIosArrowDown } from "react-icons/io";
@@ -10,6 +10,9 @@ const DinamicPage: React.FC = () => {
   const location = useLocation()
   const data = location.state.selectedCocktail
 
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   
   return (
 <DinamicPageContainer>
