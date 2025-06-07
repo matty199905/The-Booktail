@@ -23,6 +23,7 @@ const DinamicPage: React.FC = () => {
 
 <Divider/>
 
+
 <DetailsContainer>
 <h1>{data.name}</h1>
 

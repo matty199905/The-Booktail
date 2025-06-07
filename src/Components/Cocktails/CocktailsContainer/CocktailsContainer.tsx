@@ -4,8 +4,9 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useSelectorTS, type AppDispatch } from '../../../Redux/store';
 import CocktailCard from '../CocktailCard/CocktailCard';
 import { useLocation } from 'react-router-dom';
-import { resetValues, setFalvor} from '../../../Redux/Searcher/searcherSlice';
+import { resetValues, setFalvor } from '../../../Redux/Searcher/searcherSlice';
 import { useDispatch } from 'react-redux';
+import Searcher from '../../Searcher/Searcher';
 
 
 
@@ -47,6 +48,9 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
             .map(item => <CocktailCard {...item} key={item.id} />)
 
 
+    const seachedValue = searchValue.charAt(0).toUpperCase() + searchValue.slice(1);
+
+
     const renderByLetter =
         Cocktails
             .filter(item => item.name.charAt(0).toUpperCase() === letter.toUpperCase())
@@ -59,6 +63,12 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
             .filter((items) => { if (items.flavor?.some((flavor) => flavor === searchByFlavor)) { return items } })
             .map(items => <CocktailCard {...items} key={items.id} />);
 
+    const onClickFlavorHandler = (item: string) => {
+
+        dispatch(setFalvor(item));
+        setDropDown(false);
+
+    }
 
     const renderByLiquors =
         Cocktails
@@ -66,22 +76,17 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
             .map((item) => { return <CocktailCard {...item} key={item.id} /> })
 
 
-    const onClickFlavorHandler = (item: string) => {
-
-        dispatch(setFalvor(item));
-        setDropDown(false);
-        
-    }
 
 
     return (
         <CocktailsWrapper>
-            <h1>{letter ? `Resultados con: '${letter}'` : title}</h1>
+            <h1>{letter ? `Resultados con: '${letter}'` : seachedValue ? `Resultados de: "${seachedValue}"` : title}</h1>
 
 
 
             <DropDownContainer>
 
+                <Searcher cocktailsWrapper={true} onKeyDown={(e) => { if (e.key === 'Enter') { (e.target as HTMLInputElement).blur() } }} />
 
                 <BtnsContainer>
 
@@ -102,7 +107,6 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                     }
 
                 </BtnsContainer>
-
 
 
                 <DropDownMenuContainer
@@ -145,10 +149,10 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
                         ? renderByFlavors
                         : (letter !== ''
                             ? renderByLetter : searchByLiquor !== '' ? renderByLiquors
-                                : renderAll)
+                                : searchValue !== '' ? renderSearched : renderAll)
                 )}
 
-                {location.pathname === '/bySearch' && renderSearched}
+
 
             </CocktailsRenderContainer>
 

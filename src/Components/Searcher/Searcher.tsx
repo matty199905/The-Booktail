@@ -9,10 +9,11 @@ import { useDispatch } from 'react-redux';
 
 export type SearcherProps = {
   navbar?: boolean,
-  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+  cocktailsWrapper?: boolean,
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void,
 }
 
-const Searcher: React.FC<SearcherProps> = ({navbar, onKeyDown}) => {
+const Searcher: React.FC<SearcherProps> = ({navbar, cocktailsWrapper, onKeyDown}) => {
 
   const { searchValue } = useSelectorTS(state => state.Searcher);
   const location = useLocation()
@@ -22,19 +23,20 @@ const Searcher: React.FC<SearcherProps> = ({navbar, onKeyDown}) => {
 
 const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   dispatch(setSearchValue(e.target.value)); 
-  if(location.pathname !== '/') navigate('/bySearch')
 }
 
 const handleOnSubmit = (e:  React.FormEvent<HTMLFormElement>) => { 
   e.preventDefault(); 
   if(searchValue === '') {return}
-  navigate('/bySearch'); }
+  navigate('/cocktails'); }
 
 
 
 
   return (
-    <SearcherContainer navbar={navbar}>
+    <SearcherContainer 
+    navbar={navbar}
+    cocktailsWrapper={cocktailsWrapper}>
 
       <form onSubmit={(e) => handleOnSubmit(e)}>
         <input

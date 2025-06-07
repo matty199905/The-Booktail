@@ -4,7 +4,7 @@ import Home from '../Pages/Home/Home'
 import AllDrinks from '../Pages/AllDrinks/AllDrinks'
 import ByLiquor from '../Pages/ByLiquor/ByLiquor'
 import DinamicPage from '../Pages/DinamicPage/DinamicPage'
-import BySearch from '../Pages/BySearch/BySearch'
+
 
 
 const RoutesApp: React.FC = () => {
@@ -14,7 +14,6 @@ const RoutesApp: React.FC = () => {
       <Route path='/licores' element={<ByLiquor/>} />
       <Route path='/cocktails' element={<AllDrinks/>}/>
       <Route path='/cocktails/:cocktailDinamico' element={<DinamicPage/>}/>
-      <Route path='/bySearch' element={<BySearch/>} />
       
     </Routes>
   )

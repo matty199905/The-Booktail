@@ -10,9 +10,11 @@ justify-content: flex-start;
 gap: 25px;
 width: 100%;
 height: auto;
+ padding-bottom: 110px;
 margin-top: 180px;
 z-index: 3;
 h1{
+    font-family: serif;
     font-size: 45px;
     margin: 0 30px;
     text-align: center;
@@ -20,9 +22,7 @@ h1{
         font-size: 40px;
     }
 }
-@media(max-width:500px) {
-    padding-bottom: 110px;
-}
+
 `
 
 
@@ -31,13 +31,15 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-
 `
 export const BtnsContainer = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 10px;
+background-color: rgb(20, 20, 20);
+padding: 10px 20px;
+border-radius: 10px;
 `
 
 export const DropDownBtnContainer = styled.div`

@@ -18,25 +18,10 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
 
     ::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(104, 104, 104); 
-  border: 1px solid  black;
-  border-radius: 15px;
-    &:hover {
-    cursor: grab;
-} 
-}
+background-color: transparent;
 
   }
-  
+}
   
 body {   
     background-color: #2c2c2c;

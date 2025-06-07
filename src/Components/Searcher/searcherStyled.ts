@@ -5,7 +5,8 @@ import type { SearcherProps } from "./Searcher";
 
 
 export const SearcherContainer = styled.div<SearcherProps>`
-align-self: flex-end;
+align-self: ${(props)=>(props.cocktailsWrapper === true ? 'center' : 'flex-end')};
+margin: ${(props)=>(props.cocktailsWrapper === true ? '0 0 20px 0' : undefined)};
 form{
      display: flex;
       justify-content: center;
