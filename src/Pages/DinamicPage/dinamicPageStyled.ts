@@ -28,7 +28,7 @@ z-index: 3;
 @media(max-width:550px) {
 flex-direction: column;
 height: 95vh;
-width: 90vw;
+width: 95vw;
 }
 `
 
@@ -135,7 +135,7 @@ flex-wrap: wrap;
 width: 105%;
 margin-left: 20px;
 padding: 20px 30px;
-background:  linear-gradient(var(--UI-Primary),rgba(29, 15, 51, 0.65)) ;
+background:  linear-gradient(rgb(72, 68, 131),rgba(29, 15, 51, 0.65)) ;
 backdrop-filter: blur(5px);
 border: 2px solid rgba(0, 0, 0, 0.54);
 border-radius: 15px;
