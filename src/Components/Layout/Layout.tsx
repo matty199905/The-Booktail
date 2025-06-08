@@ -1,5 +1,5 @@
 import React from 'react'
-import { BluredLayout, LayoutWrapper } from './layoutStyled'
+import { Overlay, LayoutWrapper } from './layoutStyled'
 import { useLocation } from 'react-router-dom'
 
 
@@ -12,15 +12,16 @@ type LayoutData = {
 const Layout: React.FC<LayoutData> = ({ children }) => {
   const location = useLocation()
   const dinamicPage = location.state?.page
-const wallpaperTrue = location.pathname !== '/'
+const wallpaperTrue = location.pathname !== '/' && location.state?.page !== 'dinamicPage' 
 
   return (
+    
     <LayoutWrapper 
     dinamicPage={dinamicPage}
     wallpaperTrue={wallpaperTrue}>
       {
-        location.pathname !== '/' &&
-        <BluredLayout dinamicPage={dinamicPage} />
+        location.pathname !== '/' && location.state?.page !== 'dinamicPage' &&
+        <Overlay dinamicPage={dinamicPage} />
       }
 
       {children}

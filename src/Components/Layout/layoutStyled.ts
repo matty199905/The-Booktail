@@ -18,14 +18,17 @@ width: 100%;
 min-height: 100vh;
 height: auto;
 background-image:${(props)=>(props.wallpaperTrue ? `url(${LayoutImg})` : 'none')};
-background-attachment: fixed;
-background-size: contain;
+background-attachment:fixed ;
+background-size: cover;
 z-index: 0;
 @media(min-width:450px){
 background-size: cover;
 }
+@media (min-width: 550px){
+    background-image:  ${(props)=>(props.dinamicPage ? `url(${LayoutImg})`  : undefined)};
+}
 `
-export const BluredLayout = styled.div<LayoutProps>`
+export const Overlay = styled.div<LayoutProps>`
 position: absolute;
 width: 100vw;
 height: 100%;

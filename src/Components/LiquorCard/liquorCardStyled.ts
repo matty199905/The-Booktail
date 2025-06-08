@@ -4,12 +4,12 @@ import styled from "styled-components"
 export const CardContainer = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: flex-start;
+justify-content: space-around;
 align-items: center;
-gap: 17px;
+gap: 10px;
 width: 180px;
 height: 220px;
-padding: 10px;
+padding: 9px;
 border-radius: 15px;
 box-shadow: inset 0 0 20px rgb(0, 0, 0);
 transition: all 0.2s ease;
@@ -35,10 +35,10 @@ font-size: 16px;
     width: 130px;
     height: 180px;
     }
-        @media(max-width:380px){
+        @media(max-width:385px){
     width: 120px;
     height: 180px;
-    padding: 6px;
+    padding: 7px;
     }
 }
 `
@@ -48,7 +48,7 @@ type imgContainerProps = {
 }
 export const ImgContainer = styled.div<imgContainerProps>` 
 width: 100%;
-height: 75%;
+height: 85%;
 border-radius: 15px;
 background-image: ${(props) => (props.img ? `url(${props.img})` : 'none'
     )};

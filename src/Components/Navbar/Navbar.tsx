@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { LinksContainer, LogoContainer, NavbarContainer, NavbarLink, NavDivider, ResponsiveMenuContainer, ResponsiveMenuIcon } from './navbarStyled'
 import Logo from '../../Imgs/Logo/Logo.png'
 import Searcher from '../Searcher/Searcher'
@@ -13,12 +13,31 @@ import { CgMenu } from "react-icons/cg";
 
 const Navbar: React.FC = () => {
 
-  const navigate = useNavigate()
-  const location = useLocation()
-  const dispatch = useDispatch<AppDispatch>()
-  const [openMenu, setOpenMenu] = useState(false)
+  const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useDispatch<AppDispatch>();
+  const [openMenu, setOpenMenu] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
 
+  let lastScrollY = window.scrollY
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 50) {
+        setShowNavbar(true)
+        lastScrollY = window.scrollY
+        return
+      }
+      if (window.scrollY > lastScrollY) {
+        setShowNavbar(false)
+      } else {
+        setShowNavbar(true)
+      }
+      lastScrollY = window.scrollY
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
 
 
@@ -26,48 +45,51 @@ const Navbar: React.FC = () => {
 
     <AnimatePresence>
 
-      <NavbarContainer
-        initial={{ translateY: -150 }}
-        animate={{ translateY: 0 }}
-        transition={{ type: 'spring', damping: 20 }}
-        key='navbar'>
+      {showNavbar &&
 
-        <LogoContainer>
-          <img src={Logo} alt="The Booktail" />
-          <span onClick={() => navigate('/')}>The Booktail</span>
-        </LogoContainer>
+        <NavbarContainer
+          initial={{ translateY: -150 }}
+          animate={{ translateY: 0 }}
+          exit={{ translateY: -150 }}
+          transition={{ type: 'spring', damping: 18 }}
+          key='navbar'>
 
-
-        <LinksContainer>
-          <ul>
-            <li><NavbarLink to='/' onClick={() => dispatch(resetValues())}>Home</NavbarLink></li>
-            {
-              location.pathname !== '/licores' &&
-
-              <li><NavbarLink to='/licores' onClick={() => dispatch(resetValues())}>Licores</NavbarLink></li>
-            }
-            {
-              location.pathname !== '/cocktails' &&
-
-              <li><NavbarLink to='/cocktails' onClick={() => dispatch(resetValues())}>Cocktails</NavbarLink></li>
-            }
+          <LogoContainer>
+            <img src={Logo} alt="The Booktail" />
+            <span onClick={() => navigate('/')}>The Booktail</span>
+          </LogoContainer>
 
 
-          </ul>
-          <Searcher navbar={true} />
+          <LinksContainer>
+            <ul>
+              <li><NavbarLink to='/' onClick={() => dispatch(resetValues())}>Home</NavbarLink></li>
+              {
+                location.pathname !== '/licores' &&
 
-        </LinksContainer>
+                <li><NavbarLink to='/licores' onClick={() => dispatch(resetValues())}>Licores</NavbarLink></li>
+              }
+              {
+                location.pathname !== '/cocktails' &&
+
+                <li><NavbarLink to='/cocktails' onClick={() => dispatch(resetValues())}>Cocktails</NavbarLink></li>
+              }
 
 
-        {/* REsponsiveMenu */}
+            </ul>
+            <Searcher navbar={true} />
 
-        <ResponsiveMenuIcon onClick={() => setOpenMenu(!openMenu)}>
-          <CgMenu />
-        </ResponsiveMenuIcon>
+          </LinksContainer>
 
 
-      </NavbarContainer>
+          {/* REsponsiveMenu */}
 
+          <ResponsiveMenuIcon onClick={() => setOpenMenu(!openMenu)}>
+            <CgMenu />
+          </ResponsiveMenuIcon>
+
+
+        </NavbarContainer>
+      }
       {
         openMenu &&
 
@@ -80,24 +102,24 @@ const Navbar: React.FC = () => {
 
           <ul>
             <li><NavbarLink to='/' onClick={() => dispatch(resetValues())}>Home</NavbarLink></li>
-<NavDivider/>
+            <NavDivider />
             {
               location.pathname !== '/licores' &&
-<>
-              <li><NavbarLink to='/licores' onClick={() => dispatch(resetValues())}>Licores</NavbarLink></li>
-              <NavDivider/>
+              <>
+                <li><NavbarLink to='/licores' onClick={() => dispatch(resetValues())}>Licores</NavbarLink></li>
+                <NavDivider />
               </>
             }
             {
               location.pathname !== '/cocktails' &&
 
               <>
-              <li><NavbarLink to='/cocktails' onClick={() => dispatch(resetValues())}>Cocktails</NavbarLink></li>
-              <NavDivider/>
+                <li><NavbarLink to='/cocktails' onClick={() => dispatch(resetValues())}>Cocktails</NavbarLink></li>
+                <NavDivider />
               </>
             }
 
-           <li><Searcher onKeyDown={(e)=>{if(e.key === 'Enter'){setOpenMenu(false)}}}/></li>
+            <li><Searcher onKeyDown={(e) => { if (e.key === 'Enter') { setOpenMenu(false) } }} /></li>
 
           </ul>
 

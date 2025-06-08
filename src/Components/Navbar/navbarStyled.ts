@@ -38,7 +38,7 @@ span{
     align-self: flex-end;
     font-family: serif;
     margin: 0 30px 15px -10px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     transition: all 0.8s ease;
 cursor: pointer;
@@ -62,7 +62,7 @@ ul{
 justify-content: center;
 align-items: center; 
 gap: 25px;
-margin: 30px 30px 10px 0;
+margin: 30px 30px 15px 0;
     @media(max-width:850px){
       display: none;
     }
