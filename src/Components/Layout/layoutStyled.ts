@@ -19,9 +19,12 @@ width: 100%;
 min-height: 100vh;
 height: auto;
 background-image:${(props)=>(props.layoutWallpaper ? `url(${LayoutImg})` : props.homeWallpaper ? `url(${Hero})` : 'none')};
-background-attachment: fixed ;
+background-attachment:fixed ;
 background-size: cover;
 z-index: 0;
+@media (min-width: 550px){
+    background-image:  ${(props)=>(props.dinamicPage ? `url(${LayoutImg})`  : undefined)};
+}
 `
 export const Overlay = styled.div<LayoutProps>`
 position: absolute;

@@ -165,7 +165,7 @@ list-style: none;
     margin-left: 0;}
     }
     @media(max-width:550px) {
- background: linear-gradient(120deg, rgba(77, 77, 77, 0.2),rgba(52, 52, 52, 0.13)) !important;
+ background: linear-gradient(120deg, rgba(141, 141, 141, 0.2),rgba(52, 52, 52, 0.27)) !important;
     backdrop-filter: blur(5px) saturate(150%);
     box-shadow:  0 0 20px rgba(0, 0, 0, 0.53);
 
