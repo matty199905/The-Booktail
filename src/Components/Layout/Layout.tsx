@@ -12,13 +12,15 @@ type LayoutData = {
 const Layout: React.FC<LayoutData> = ({ children }) => {
   const location = useLocation()
   const dinamicPage = location.state?.page
-const wallpaperTrue = location.pathname !== '/' && location.state?.page !== 'dinamicPage' 
+const layoutWallpaper = location.pathname !== '/' && location.state?.page !== 'dinamicPage' 
+const homeWallpaper = location.pathname === '/'
 
   return (
     
     <LayoutWrapper 
     dinamicPage={dinamicPage}
-    wallpaperTrue={wallpaperTrue}>
+    layoutWallpaper={layoutWallpaper}
+    homeWallpaper ={homeWallpaper}>
       {
         location.pathname !== '/' && location.state?.page !== 'dinamicPage' &&
         <Overlay dinamicPage={dinamicPage} />

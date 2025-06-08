@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import LayoutImg from '../../Imgs/Layout/Layout.avif'
-
+import Hero from '../../Imgs/Hero/wallpaper.jpg'
 
 
 type LayoutProps = {
     dinamicPage: string,
-    wallpaperTrue?: boolean
+    layoutWallpaper?: boolean,
+    homeWallpaper?: boolean
 }
 
 export const LayoutWrapper = styled.div<LayoutProps>`
@@ -17,16 +18,10 @@ align-items: center;
 width: 100%;
 min-height: 100vh;
 height: auto;
-background-image:${(props)=>(props.wallpaperTrue ? `url(${LayoutImg})` : 'none')};
-background-attachment:fixed ;
+background-image:${(props)=>(props.layoutWallpaper ? `url(${LayoutImg})` : props.homeWallpaper ? `url(${Hero})` : 'none')};
+background-attachment: fixed ;
 background-size: cover;
 z-index: 0;
-@media(min-width:450px){
-background-size: cover;
-}
-@media (min-width: 550px){
-    background-image:  ${(props)=>(props.dinamicPage ? `url(${LayoutImg})`  : undefined)};
-}
 `
 export const Overlay = styled.div<LayoutProps>`
 position: absolute;
