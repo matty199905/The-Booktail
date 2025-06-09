@@ -28,6 +28,7 @@ body {
 font-family: sans-serif;
 letter-spacing: 1px;
     color: white;
+    overflow-y: scroll;
   }
     
    a {

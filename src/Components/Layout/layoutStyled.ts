@@ -15,7 +15,7 @@ display: flex;
 flex-direction: column;
 justify-content:  ${(props)=>(props.dinamicPage ? 'center' : 'flex-start')};
 align-items: center;
-width: 100%;
+width: 100vw;
 min-height: 100vh;
 height: auto;
 background-image:${(props)=>(props.layoutWallpaper ? `url(${LayoutImg})` : props.homeWallpaper ? `url(${Hero})` : 'none')};
@@ -24,6 +24,7 @@ background-size: cover;
 z-index: 0;
 @media (min-width: 550px){
     background-image:  ${(props)=>(props.dinamicPage ? `url(${LayoutImg})`  : undefined)};
+    background-attachment: scroll;
 }
 `
 export const Overlay = styled.div<LayoutProps>`
