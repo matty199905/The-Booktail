@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import LayoutImg from '../../Imgs/Layout/Layout.avif'
-
-
+import Hero from '../../Imgs/Hero/wallpaper.jpg'
 
 type LayoutProps = {
     dinamicPage: string,
@@ -10,21 +9,21 @@ type LayoutProps = {
 }
 
 export const LayoutWrapper = styled.div<LayoutProps>`
-position: relative;
-display: flex;
-flex-direction: column;
-justify-content:  ${(props)=>(props.dinamicPage ? 'center' : 'flex-start')};
-align-items: center;
-width: 100%;
-min-height: 100dvh;
-height: auto;
-background-image:${(props)=>(props.layoutWallpaper ? `url(${LayoutImg})` : props.homeWallpaper ? `url(${LayoutImg})` :  'none')};
-background-attachment:fixed ;
-background-size: cover;
-z-index: 0;
-@media (min-width: 550px){
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: ${(props)=>(props.dinamicPage ? 'center' : 'flex-start')};
+  align-items: center;
+  width: 100%;
+  min-height: 100dvh; 
+  height: auto;
+  background-image:${(props)=>(props.layoutWallpaper ? `url(${LayoutImg})` : props.homeWallpaper ? `url(${Hero})` : undefined)};
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 0;
+  @media (min-width: 550px){
     background-image:  ${(props)=>(props.dinamicPage ? `url(${LayoutImg})`  : undefined)};
-}
+  }
 `
 export const Overlay = styled.div<LayoutProps>`
 position: absolute;
