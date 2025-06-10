@@ -49,7 +49,7 @@ cursor: pointer;
 }
  @media(max-width:550px) {
 left:0px;
-top: 18px;
+top: 28px;
 font-size: 40px;
 z-index: 2;
     }
@@ -116,15 +116,15 @@ h1{
 }
 }
 @media(max-width:550px) {
+    position: absolute;
 flex-flow: row wrap;
 gap: 15px;
 width: 100%;
 padding-top: 90px;
-margin-left: -10px;
 h1{
-    position: absolute;
+position: absolute;
 top: 23px;
-left: 25px;
+left: 20px;
 margin-left: 40px;
 
 }
