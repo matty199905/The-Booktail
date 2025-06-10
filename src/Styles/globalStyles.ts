@@ -17,18 +17,31 @@ export const GlobalStyles = createGlobalStyle`
     position: relative;
     scroll-behavior: smooth;
 
-    ::-webkit-scrollbar {
-background-color: transparent;
 
-  }
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+
+}
+
 }
   
 body {   
     background-color: #2c2c2c;
-font-family: sans-serif;
-letter-spacing: 1px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
     color: white;
-    overflow-y: scroll;
+        overflow-x: hidden;
   }
     
    a {

@@ -107,6 +107,7 @@ padding: 30px 30px 30px 15px;
 width: 60%;
 height: 100%;
 overflow-y: auto;
+overflow-x: hidden;
 
 @media(max-width:800px) {
 h1{
