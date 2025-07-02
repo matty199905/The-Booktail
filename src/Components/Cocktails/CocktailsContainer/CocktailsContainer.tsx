@@ -80,7 +80,15 @@ const CocktailsContainer: React.FC<CocktailsContainerData> = ({ title }) => {
 
     return (
         <CocktailsWrapper>
-            <h1>{letter ? `Resultados con: '${letter}'` : seachedValue ? `Resultados de: "${seachedValue}"` : title}</h1>
+            <h1>
+                {
+                    letter ? `Resultados con: '${letter}'` :
+                        seachedValue ? `Resultados de: "${seachedValue}"` :
+                            searchByLiquor ? `Todos los Cocktails con: ${searchByLiquor}` :
+                                searchByFlavor ? `Todos los Cocktails: ${searchByFlavor}` :
+                                    title
+                }
+            </h1>
 
 
 
