@@ -29,7 +29,7 @@ export const LayoutWrapper = styled.div<LayoutProps>`
     pointer-events: none;
       background-image:${(props)=>(props.layoutWallpaper ? `url(${LayoutImg})` : props.homeWallpaper ? `url(${Hero})` : undefined)};
   background-size: cover;
-  background-position: center;
+  background-position: ${(props)=>(props.layoutWallpaper ? `center` : undefined)};
   padding-top: 500px;
   background-repeat: no-repeat;
   @media (max-width: 850px) {
