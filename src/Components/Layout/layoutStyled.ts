@@ -15,10 +15,9 @@ export const LayoutWrapper = styled.div<LayoutProps>`
   justify-content: ${(props)=>(props.dinamicPage ? 'center' : 'flex-start')};
   align-items: center;
   width: 100%;
-  min-height: 100dvh; 
+  min-height: 100vh; 
   height: auto;
   background-image:${(props)=>(props.layoutWallpaper ? `url(${LayoutImg})` : props.homeWallpaper ? `url(${Hero})` : undefined)};
-  background-attachment: fixed;
   background-size: cover;
   z-index: 0;
   @media (min-width: 550px){
