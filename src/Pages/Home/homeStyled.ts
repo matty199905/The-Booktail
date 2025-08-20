@@ -43,6 +43,7 @@ margin-bottom: 120px;
   width: 95vw;
   font-size: 16px;
   padding: 30px 30px;
+  margin: 0 0 120px 0;
 }
 h2 {
   font-size: 18px;
