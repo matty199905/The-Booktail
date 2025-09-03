@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# 🍹 Librería de Cócteles con React.js estilizado Styled-Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de librería de cócteles desarrollada con **Vite**, **React.js** y **Styled-Components**.  
+Permite explorar, filtrar y visualizar recetas de cócteles con información detallada sobre ingredientes y métodos de preparación.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- 📄 **Páginas dinámicas** para cada cóctel con su receta completa y método de preparación.  
+- 🔍 **Filtros avanzados** por:  
+  - Búsqueda por nombre  
+  - Letra inicial  
+  - Perfiles de sabor  
+  - Tipo de alcohol  
+- 🌐 **Navegación fluida** con **React Router**.  
+- ⚡ **Gestión de estado global** mediante **Redux Toolkit**.  
+- 🎨 Animaciones y microinteracciones con **Framer Motion**.  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Tecnologías y Herramientas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Vite** – Entorno de desarrollo rápido y moderno.  
+- **React.js** – Librería principal para interfaces de usuario.  
+- **TypeScript** – Tipado estático para mayor robustez.  
+- **Styled-Components** – Estilos dinámicos con CSS-in-JS.  
+- **React Router** – Manejo de rutas dinámicas.  
+- **React Redux / Redux Toolkit** – Gestión global del estado.  
+- **React Icons** – Librería de íconos para UI.  
+- **Framer Motion** – Animaciones fluidas y declarativas.  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
+## 🚀 Instalación y Uso
+
+ Clonar el repositorio:  
+   ```bash
+   git clone https://github.com/usuario/The-Booktail.git
+
     // Enable its recommended typescript rules
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
 })
 ```
+Instalar dependencias:
+npm install
+
+Ejecutar el proyecto en modo desarrollo:
+npm run dev
