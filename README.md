@@ -34,7 +34,7 @@ Permite explorar, filtrar y visualizar recetas de cócteles con información det
 
 ## 🚀 Instalación y Uso
 
- Clonar el repositorio:  
+ ## Clonar el repositorio:  
    ```bash
    git clone https://github.com/usuario/The-Booktail.git
 
@@ -44,8 +44,8 @@ Permite explorar, filtrar y visualizar recetas de cócteles con información det
   },
 })
 ```
-Instalar dependencias:
+## Instalar dependencias:
 npm install
 
-Ejecutar el proyecto en modo desarrollo:
+## Ejecutar el proyecto en modo desarrollo:
 npm run dev
